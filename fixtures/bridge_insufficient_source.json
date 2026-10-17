@@ -1,0 +1,10 @@
+{
+  "_note": "GELİŞTİRME VERİSİ — canlı AI sonucu değildir. Yetersiz kaynak ekranını denemek içindir.",
+  "status": "insufficient_source",
+  "simple_explanation": "Seçtiğiniz ifadeyi açıklamak için kaynak metin yeterli bağlam içermiyor: ifade yalnızca bir kez, tanımı ya da örneği olmadan geçiyor. İfadenin geçtiği paragrafı ve varsa önceki paragrafı da kaynak alanına ekleyip yeniden deneyin.",
+  "source_refs": ["P1"],
+  "terms": [],
+  "example": null,
+  "quiz": null,
+  "warnings": ["Kaynak, seçilen ifadeyi açıklamak için yetersiz. Daha fazla bağlam ekleyin."]
+}
