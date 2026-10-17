@@ -1,5 +1,7 @@
 # Anlatım Köprüsü - English Demo Script
 
+Güncel konuşma metni: [Demo konuşması v2](Demo_Konusmasi_EN_v2.md). Bu dosya önceki taslak olarak saklanmıştır.
+
 **Group 14 | Rehearsal draft v1 | Target: about five minutes**
 
 Bu belge prova içindir. Canlı akış henüz çalıştırılmadı ve süre ölçülmedi. Söylenecek cümleler, çalışan sürümde gerçekten görülen davranışla eşleştirilecek. İngilizce metinler okunacak konuşmadır; Türkçe notlar kayıt ekibine yöneliktir. Yanlış bir davranış görülürse başarı cümlesi okunmaz; hata kaydedilir ve giderilir.

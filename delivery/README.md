@@ -8,9 +8,15 @@ Bu klasördeki PDF ve PPTX, uygulama geliştirmesi sürerken hazırlanan **tasla
 - [Altı slaytlık İngilizce sunum taslağı](Anlatim_Koprusu_English_Deck_Draft_v1.pptx)
 - [Raporun düzenlenebilir metni](../docs/Rapor_Taslagi_v1.md)
 - [Sunumun düzenlenebilir metni](../docs/Ingilizce_Sunum_Metni_v1.md)
-- [Beş dakikalık İngilizce demo konuşması ve ekran akışı](../docs/Demo_Konusmasi_EN_v1.md)
+- [Güncel İngilizce demo konuşması ve ekran akışı](../docs/Demo_Konusmasi_EN_v2.md)
+- [Mehmet Ali'nin ayrı okuma kartı](../docs/Prova_Mehmet_Ali_EN.md)
+- [İrem'in ayrı okuma kartı](../docs/Prova_Irem_EN.md)
+- [Öğrenci gözüyle içerik incelemesi](../evaluation/Ogrenci_Gozuyle_Icerik_Incelemesi.md)
 - [İrem'den beklenecek ilk teknik devir](../docs/Irem_Teknik_Devir_Ihtiyaclari.md)
-- [Yapılmış yerel içerik kontrolleri](../evaluation/Icerik_Kontrol_Sonuclari_v1.json)
+- [Güncel yerel içerik kontrolleri](../evaluation/Icerik_Kontrol_Sonuclari_v2.json)
+- [Varsayımlara dayalı konuşma süre hesabı](../evaluation/Prova_Sure_Tahmini_v2.json)
+
+Rapor ve PPTX v1, ilk hazırlık durumunu gösteren taslaklardır. Rapordaki 134/130/121 kelime sayıları ilk içerik sürümüne aittir. Öğrenci odaklı düzenlemeden sonra güncel sayılar 142/130/128'dir ve v2 içerik kontrol kaydında tutulur. İngilizce konuşma için güncel dosya v2'dir. Son teslimde PDF ve PPTX gerçek teknik sonuçlarla birlikte güncellenecektir.
 
 ## Mevcut durum
 

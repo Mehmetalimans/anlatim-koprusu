@@ -1,0 +1,58 @@
+{
+  "checked_at_istanbul": "2026-10-17T16:29:07.209206+03:00",
+  "content_revision": "v1.1",
+  "scope": "AI-assisted editorial review and local content checks only. No student comprehension test, live app test or learning outcome measurement.",
+  "content_file_sha256": "ab17d1ad46e7b468d0ec766068f6793d710b93258ceef12cc18c877db4dcdf84",
+  "records": [
+    {
+      "id": "fizik2_potansiyel",
+      "prose_word_count": 142,
+      "selected_phrase_occurrences": 1,
+      "source_characters": 978,
+      "checks_passed": true
+    },
+    {
+      "id": "econ100_firsat_maliyeti",
+      "prose_word_count": 130,
+      "selected_phrase_occurrences": 1,
+      "source_characters": 979,
+      "checks_passed": true
+    },
+    {
+      "id": "python_for_range",
+      "prose_word_count": 128,
+      "selected_phrase_occurrences": 1,
+      "source_characters": 970,
+      "checks_passed": true
+    }
+  ],
+  "physics_arithmetic": {
+    "passed": true,
+    "actual": [
+      6,
+      -6,
+      -6
+    ]
+  },
+  "python_range_values": {
+    "passed": true,
+    "range_1_4": [
+      1,
+      2,
+      3
+    ],
+    "range_2_5": [
+      2,
+      3,
+      4
+    ]
+  },
+  "app_acceptance_scenarios": {
+    "planned": 20,
+    "executed": 0,
+    "status": "pending"
+  },
+  "human_comprehension_session": {
+    "status": "not_recorded"
+  }
+}

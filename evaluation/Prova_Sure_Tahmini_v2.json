@@ -1,0 +1,32 @@
+{
+  "script": "docs/Demo_Konusmasi_EN_v2.md",
+  "count_method": "Whitespace-separated words in English blockquotes only.",
+  "previous_word_count": 462,
+  "current_word_count": 432,
+  "section_word_counts": {
+    "A. 0:00-0:40 - Problem / Mehmet Ali": 64,
+    "B. 0:40-1:10 - How it works / İrem": 57,
+    "C. 1:10-1:35 - Choose the phrase / İrem": 39,
+    "D. 1:35-2:05 - Read the explanation / İrem": 50,
+    "E. 2:05-2:40 - Try a wrong reason / İrem": 39,
+    "F. 2:40-3:25 - Try again / İrem": 47,
+    "G. 3:25-4:00 - Other subjects / Mehmet Ali": 48,
+    "H. 4:00-4:35 - Prompts and checks / İrem": 46,
+    "I. 4:35-5:00 - Social impact and limits / Mehmet Ali": 42
+  },
+  "estimated_speech_seconds_at_100_wpm": 259,
+  "estimated_speech_seconds_at_120_wpm": 216,
+  "assumed_demo_interaction_seconds": [
+    45,
+    75
+  ],
+  "timing_status": "Estimate only. No timed human rehearsal yet.",
+  "user_reported_possible_difficult_words": [
+    "phrases",
+    "visible"
+  ],
+  "replacements": {
+    "difficult phrases": "difficult parts",
+    "keep the source visible": "show the original text"
+  }
+}
