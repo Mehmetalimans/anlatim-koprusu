@@ -1,0 +1,27 @@
+{
+  "_note": "GELİŞTİRME VERİSİ — canlı AI sonucu değildir. dev_input_python.json girdisine elle yazılmış örnek çıktı.",
+  "status": "ready",
+  "simple_explanation": "range(başlangıç, bitiş) sayı üretmeye başlangıç değerinden başlar ve bitiş değerine gelmeden önce durur. Bu yüzden bitiş değeri sonuçta yer almaz. Örnekteki range(1, 4) 1, 2 ve 3'ü üretir; 4 üretilmez. Döngü bu üç sayının her biri için bir kez çalışır.",
+  "source_refs": ["P1", "P2", "P3"],
+  "terms": [
+    {"term": "range", "explanation": "Belirli aralıktaki tam sayıları sırayla üreten Python yapısı.", "origin": "source"},
+    {"term": "for döngüsü", "explanation": "Bir dizinin her öğesi için aynı kod bloğunu tekrar çalıştıran yapı.", "origin": "source"},
+    {"term": "dışlayıcı üst sınır", "explanation": "Aralığın bitiş değerinin sonuca dahil edilmemesi.", "origin": "supporting"}
+  ],
+  "example": {
+    "text": "range(0, 3) ile çalışan bir döngü 0, 1 ve 2 değerlerini alır; toplam üç tur döner, 3 değerini hiç almaz.",
+    "origin": "generated"
+  },
+  "quiz": {
+    "question": "for sayi in range(2, 6): print(sayi) kodu hangi sayıları yazdırır?",
+    "options": [
+      {"id": "A", "text": "2, 3, 4, 5"},
+      {"id": "B", "text": "2, 3, 4, 5, 6"},
+      {"id": "C", "text": "3, 4, 5"},
+      {"id": "D", "text": "Yalnızca 2 ve 6"}
+    ],
+    "correct_option_id": "A",
+    "answer_explanation": "range başlangıç değerini (2) dahil eder, bitiş değerine (6) ulaşmadan durur; bu yüzden 2, 3, 4, 5 yazdırılır."
+  },
+  "warnings": []
+}
