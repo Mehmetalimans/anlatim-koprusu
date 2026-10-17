@@ -1,0 +1,22 @@
+{
+  "id": "fizik2_potansiyel",
+  "subject_label": "Fizik 2 — Elektrik",
+  "title": "Aynı gerilim, farklı enerji değişimi",
+  "source_text": "Elektrostatik bir düzende elektriksel potansiyel, seçilmiş bir referansa göre birim yük başına düşen elektriksel potansiyel enerjiyi ifade eder. Potansiyel V ile, potansiyel enerji U ile gösterilir. Volt ile joule farklı büyüklüklerin birimleridir; bir volt, bir coulomb başına bir joule anlamına gelir. Bu yüzden bir noktadaki potansiyeli söylemek, o noktadaki her yükün aynı enerjiye sahip olduğunu söylemek değildir.\n\nBir q yükü A noktasından B noktasına taşındığında potansiyel farkı ΔV = V_B − V_A olarak tanımlanır. Burada Δ, son değerden ilk değerin çıkarıldığını gösterir. Potansiyel enerji değişimi ise ΔU = q × ΔV bağıntısıyla hesaplanır. Örneğin +2 C yük, potansiyelin 3 V arttığı bir noktaya taşınırsa enerji değişimi +6 J olur. Aynı noktalar arasında −2 C yük taşınırsa değişim −6 J olur. Bu karşılaştırmada alanı oluşturan düzenin değişmediği ve taşınan yükün bu düzeni etkilemediği varsayılır. Hesapta hem yükün hem potansiyel farkının işaretini korumak gerekir.",
+  "selected_phrase": "birim yük başına düşen elektriksel potansiyel enerjiyi",
+  "sources": [
+    {
+      "title": "OpenStax, University Physics Volume 2, Bölüm 7.2",
+      "url": "https://openstax.org/books/university-physics-volume-2/pages/7-2-electric-potential-and-potential-difference"
+    }
+  ],
+  "expected_meaning": "Elektriksel potansiyel birim yük başına enerjiyle ilişkilidir. Potansiyel farkı ile enerji değişimi aynı büyüklük değildir; ΔU = q × ΔV bağıntısında yükün işareti ve büyüklüğü korunur.",
+  "invariants": [
+    "Elektriksel potansiyel ile potansiyel enerji farklı büyüklüklerdir. Potansiyel, enerji/yük oranıyla ilişkilidir.",
+    "Potansiyel farkı son eksi ilk potansiyeldir; ΔU = q × ΔV.",
+    "Referans seçimi ve sabit dış alan varsayımı kaybolmamalıdır.",
+    "Pozitif ve negatif yük örneklerinde birim ve işaret korunmalıdır."
+  ],
+  "correct_rationale": "Son potansiyel daha küçük olduğundan fark −2 V. Pozitif 3 C ile çarpınca −6 J buluyorum.",
+  "incorrect_rationale": "Gerilim iki azaldığı için yük ne olursa olsun enerji −2 J azalır."
+}

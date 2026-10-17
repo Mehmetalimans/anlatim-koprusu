@@ -1,0 +1,297 @@
+{
+  "format_version": "1.0",
+  "purpose": "Authored development fixtures and review criteria. Not a Gemini response, measured score or live test result.",
+  "label": "GELİŞTİRME VERİSİ - canlı AI sonucu değildir",
+  "reference_rule": "A/B/C/D expectations apply only to these fixed questions. Never transfer option letters to a newly generated question.",
+  "paragraph_rule": "P IDs assume blank-line prose splitting with fenced code preserved as one block. Confirm against the actual app source splitter.",
+  "cases": [
+    {
+      "demo_id": "fizik2_potansiyel",
+      "bridge_fixture": {
+        "status": "ready",
+        "simple_explanation": "Birim yük başına enerji, enerjinin yük miktarına oranıdır. Elektriksel potansiyel volt, potansiyel enerji joule ile ifade edilir. Aynı potansiyel farkında enerji değişimi yükün miktarına ve işaretine bağlıdır.",
+        "source_refs": [
+          "P1",
+          "P2"
+        ],
+        "terms": [
+          {
+            "term": "potansiyel farkı",
+            "explanation": "B noktasının potansiyelinden A noktasının potansiyelinin çıkarılmasıyla bulunan ΔV.",
+            "origin": "source"
+          }
+        ],
+        "example": {
+          "text": "Sabit dış alanda +1 C yükün potansiyelin 2 V arttığı noktaya taşınması, potansiyel enerjide +2 J değişime karşılık gelir.",
+          "origin": "generated"
+        },
+        "quiz": {
+          "question": "Sabit dış alanda +3 C yük, potansiyelin 2 V azaldığı bir noktaya taşınıyor. Potansiyel enerji değişimi nedir?",
+          "options": [
+            {
+              "id": "A",
+              "text": "+6 J"
+            },
+            {
+              "id": "B",
+              "text": "−6 J"
+            },
+            {
+              "id": "C",
+              "text": "−2 J"
+            },
+            {
+              "id": "D",
+              "text": "−2/3 J"
+            }
+          ],
+          "correct_option_id": "B",
+          "answer_explanation": "ΔV = −2 V ve q = +3 C. ΔU = q × ΔV = −6 J."
+        },
+        "warnings": []
+      },
+      "attempts": [
+        {
+          "id": "fizik2_potansiyel_correct_choice_correct_reason",
+          "selected_option_id": "B",
+          "rationale": "Son potansiyel daha küçük olduğundan ΔV = −2 V. Pozitif 3 C yük ile çarpınca −6 J bulurum.",
+          "expected_is_correct": true,
+          "rationale_assessment": "conceptually_correct",
+          "feedback_review_points": [
+            "Potansiyel farkının işaretini ve yük çarpanını doğru kullanmasını belirt."
+          ],
+          "execution_status": "not_run"
+        },
+        {
+          "id": "fizik2_potansiyel_wrong_choice_wrong_reason",
+          "selected_option_id": "C",
+          "rationale": "Potansiyel 2 azaldığı için yükün değerinden bağımsız olarak enerji −2 J olur.",
+          "expected_is_correct": false,
+          "rationale_assessment": "conceptual_error",
+          "feedback_review_points": [
+            "Gerekçede yük çarpanının atlandığını açıkla.",
+            "Volt ile joule büyüklüklerini ayır."
+          ],
+          "execution_status": "not_run"
+        },
+        {
+          "id": "fizik2_potansiyel_correct_choice_wrong_reason",
+          "selected_option_id": "B",
+          "rationale": "Potansiyel 2 azaldığı için yükün değerinden bağımsız olarak enerji −2 J olur.",
+          "expected_is_correct": true,
+          "rationale_assessment": "conceptual_error",
+          "feedback_review_points": [
+            "Gerekçede yük çarpanının atlandığını açıkla.",
+            "Volt ile joule büyüklüklerini ayır.",
+            "Şık doğru olsa da gerekçenin hatalı olduğunu açıkça ayır."
+          ],
+          "execution_status": "not_run"
+        },
+        {
+          "id": "fizik2_potansiyel_wrong_choice_correct_reason",
+          "selected_option_id": "C",
+          "rationale": "Son potansiyel daha küçük olduğundan ΔV = −2 V. Pozitif 3 C yük ile çarpınca −6 J bulurum.",
+          "expected_is_correct": false,
+          "rationale_assessment": "conceptually_correct",
+          "feedback_review_points": [
+            "Potansiyel farkının işaretini ve yük çarpanını doğru kullanmasını belirt.",
+            "Gerekçe doğru düşünceyi içerirken seçilen şıkkın onunla uyuşmadığını belirt."
+          ],
+          "execution_status": "not_run"
+        }
+      ]
+    },
+    {
+      "demo_id": "econ100_firsat_maliyeti",
+      "bridge_fixture": {
+        "status": "ready",
+        "simple_explanation": "Fırsat maliyeti, seçimin yerine yapılabilecek en çok tercih edilen alternatifin değeridir. Deniz ders çalışmasaydı konsere gideceğinden bu örnekte konserin değeri esas alınır. Konser ile filmin değerleri toplanmaz.",
+        "source_refs": [
+          "P1",
+          "P2"
+        ],
+        "terms": [
+          {
+            "term": "fırsat maliyeti",
+            "explanation": "Bir tercih yapılırken vazgeçilen en iyi alternatifin değeri.",
+            "origin": "source"
+          }
+        ],
+        "example": {
+          "text": "Aynı saatte yalnızca bir etkinlik yapılabiliyorsa, ders yerine en çok yürüyüş tercih edilecek olması fırsat maliyetini yürüyüşün değerine bağlar.",
+          "origin": "generated"
+        },
+        "quiz": {
+          "question": "Ece aynı saatte yalnız bir etkinlik yapabilir: atölye, yürüyüş veya film. Atölyeyi seçer. Atölye olmasaydı yürüyüşü, yürüyüş de mümkün olmasaydı filmi seçerdi. Atölyenin fırsat maliyeti hangisidir?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Yürüyüşün Ece için değeri"
+            },
+            {
+              "id": "B",
+              "text": "Yürüyüş ve filmin değerlerinin toplamı"
+            },
+            {
+              "id": "C",
+              "text": "Ücret belirtilmediği için otomatik olarak sıfır"
+            },
+            {
+              "id": "D",
+              "text": "Atölyenin Ece için değeri"
+            }
+          ],
+          "correct_option_id": "A",
+          "answer_explanation": "Ece atölye olmasaydı yürüyüşü seçerdi. Vazgeçilen en iyi uygulanabilir alternatif yürüyüştür."
+        },
+        "warnings": []
+      },
+      "attempts": [
+        {
+          "id": "econ100_firsat_maliyeti_correct_choice_correct_reason",
+          "selected_option_id": "A",
+          "rationale": "Atölye olmasaydı yürüyüşü yapacaktı. Vazgeçilen en iyi seçenek yürüyüş olduğundan onun değeri esas alınır.",
+          "expected_is_correct": true,
+          "rationale_assessment": "conceptually_correct",
+          "feedback_review_points": [
+            "En iyi alternatifin yürüyüş olduğunu doğru belirlemesini belirt."
+          ],
+          "execution_status": "not_run"
+        },
+        {
+          "id": "econ100_firsat_maliyeti_wrong_choice_wrong_reason",
+          "selected_option_id": "B",
+          "rationale": "Yürüyüşü de filmi de yapamadığı için bu iki seçeneğin değerlerini toplamalıyız.",
+          "expected_is_correct": false,
+          "rationale_assessment": "conceptual_error",
+          "feedback_review_points": [
+            "Birbirini dışlayan bütün alternatiflerin değerlerinin toplanmadığını açıkla.",
+            "Verilen tercih sırasına dayan."
+          ],
+          "execution_status": "not_run"
+        },
+        {
+          "id": "econ100_firsat_maliyeti_correct_choice_wrong_reason",
+          "selected_option_id": "A",
+          "rationale": "Yürüyüşü de filmi de yapamadığı için bu iki seçeneğin değerlerini toplamalıyız.",
+          "expected_is_correct": true,
+          "rationale_assessment": "conceptual_error",
+          "feedback_review_points": [
+            "Birbirini dışlayan bütün alternatiflerin değerlerinin toplanmadığını açıkla.",
+            "Verilen tercih sırasına dayan.",
+            "Şık doğru olsa da gerekçenin hatalı olduğunu açıkça ayır."
+          ],
+          "execution_status": "not_run"
+        },
+        {
+          "id": "econ100_firsat_maliyeti_wrong_choice_correct_reason",
+          "selected_option_id": "B",
+          "rationale": "Atölye olmasaydı yürüyüşü yapacaktı. Vazgeçilen en iyi seçenek yürüyüş olduğundan onun değeri esas alınır.",
+          "expected_is_correct": false,
+          "rationale_assessment": "conceptually_correct",
+          "feedback_review_points": [
+            "En iyi alternatifin yürüyüş olduğunu doğru belirlemesini belirt.",
+            "Gerekçe doğru düşünceyi içerirken seçilen şıkkın onunla uyuşmadığını belirt."
+          ],
+          "execution_status": "not_run"
+        }
+      ]
+    },
+    {
+      "demo_id": "python_for_range",
+      "bridge_fixture": {
+        "status": "ready",
+        "simple_explanation": "Bitiş değeri dahil değildir demek, döngünün o değeri kullanmadan durmasıdır. range(1, 4) ile döngü 1, 2 ve 3 değerlerini kullanır. Kodun girintili print satırı her değerde bir kez çalışır.",
+        "source_refs": [
+          "P1",
+          "P3"
+        ],
+        "terms": [
+          {
+            "term": "girinti",
+            "explanation": "Satırın hangi kod bloğuna ait olduğunu belirleyen baştaki boşluk düzeni.",
+            "origin": "source"
+          }
+        ],
+        "example": {
+          "text": "for sayi in range(3, 6): döngüsünün girintili print(sayi) satırı ayrı satırlarda 3, 4 ve 5 yazdırır.",
+          "origin": "generated"
+        },
+        "quiz": {
+          "question": "Aşağıdaki kodun çıktısı nedir?\n```python\nfor sayi in range(2, 5):\n    print(sayi)\n```",
+          "options": [
+            {
+              "id": "A",
+              "text": "Ayrı satırlarda 2, 3, 4, 5"
+            },
+            {
+              "id": "B",
+              "text": "Ayrı satırlarda 0, 1, 2, 3, 4"
+            },
+            {
+              "id": "C",
+              "text": "Ayrı satırlarda 2, 3, 4"
+            },
+            {
+              "id": "D",
+              "text": "Yalnızca 5"
+            }
+          ],
+          "correct_option_id": "C",
+          "answer_explanation": "Başlangıç 2 dahil, bitiş 5 hariçtir. Döngü sırasıyla 2, 3 ve 4 yazdırır."
+        },
+        "warnings": []
+      },
+      "attempts": [
+        {
+          "id": "python_for_range_correct_choice_correct_reason",
+          "selected_option_id": "C",
+          "rationale": "İkiyle başlar ve beşi dahil etmeden durur. Bu yüzden ayrı satırlarda 2, 3 ve 4 yazdırır.",
+          "expected_is_correct": true,
+          "rationale_assessment": "conceptually_correct",
+          "feedback_review_points": [
+            "Başlangıcı ve bitişin hariç olmasını doğru kullanmasını belirt."
+          ],
+          "execution_status": "not_run"
+        },
+        {
+          "id": "python_for_range_wrong_choice_wrong_reason",
+          "selected_option_id": "A",
+          "rationale": "Bitiş sınırı da dahil olduğu için 2, 3, 4 ve 5 yazdırır.",
+          "expected_is_correct": false,
+          "rationale_assessment": "conceptual_error",
+          "feedback_review_points": [
+            "Bitiş 5 değerinin dahil olmadığını açıkla.",
+            "Başlangıç 2 bilgisini değiştirme."
+          ],
+          "execution_status": "not_run"
+        },
+        {
+          "id": "python_for_range_correct_choice_wrong_reason",
+          "selected_option_id": "C",
+          "rationale": "Bitiş sınırı da dahil olduğu için 2, 3, 4 ve 5 yazdırır.",
+          "expected_is_correct": true,
+          "rationale_assessment": "conceptual_error",
+          "feedback_review_points": [
+            "Bitiş 5 değerinin dahil olmadığını açıkla.",
+            "Başlangıç 2 bilgisini değiştirme.",
+            "Şık doğru olsa da gerekçenin hatalı olduğunu açıkça ayır."
+          ],
+          "execution_status": "not_run"
+        },
+        {
+          "id": "python_for_range_wrong_choice_correct_reason",
+          "selected_option_id": "A",
+          "rationale": "İkiyle başlar ve beşi dahil etmeden durur. Bu yüzden ayrı satırlarda 2, 3 ve 4 yazdırır.",
+          "expected_is_correct": false,
+          "rationale_assessment": "conceptually_correct",
+          "feedback_review_points": [
+            "Başlangıcı ve bitişin hariç olmasını doğru kullanmasını belirt.",
+            "Gerekçe doğru düşünceyi içerirken seçilen şıkkın onunla uyuşmadığını belirt."
+          ],
+          "execution_status": "not_run"
+        }
+      ]
+    }
+  ]
+}

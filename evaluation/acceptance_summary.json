@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-17",
+  "branch": "codex/acceptance",
+  "irem_source_commit": "3e9a4ac",
+  "integration_merge_commit": "d0f8e9a",
+  "scope": "Independent offline technical rerun plus review of Irem-provided live logs. No new live calls on Mehmet Ali computer.",
+  "automated_tests": {
+    "tests": 69,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "junit_timestamp": "2026-10-17T19:02:05.933478+03:00",
+  "acceptance_headings": {
+    "offline_passed": 10,
+    "live_passed": 7,
+    "live_partial": 2,
+    "pending": 1
+  },
+  "live_api": {
+    "status": "recorded_on_irem_computer",
+    "user_report": "Shared live JSON records reviewed against current contracts; generation and feedback records have valid structure.",
+    "local_key_present": false,
+    "local_check": "Stopped before network request because GEMINI_API_KEY was absent.",
+    "configured_default_model": "gemini-3.5-flash-lite",
+    "verified_model": "gemini-3.5-flash-lite",
+    "evidence": "evaluation/Canli_Sonuclar_20261017.md",
+    "record_counts": {
+      "generation": 16,
+      "feedback": 50,
+      "excludes_connectivity_check": true
+    }
+  },
+  "pending": [
+    "Incorrect rationale praised in one ECON case: revise and retest",
+    "Physics U versus energy-change wording and negative-charge sign check",
+    "Latest generation plus latest feedback on same new manually entered source/question",
+    "English demo video",
+    "Second-computer live setup and target-audience repository access check"
+  ],
+  "evidence": "evaluation/Kabul_Sonuclari_20261017.md",
+  "reviewed_app_commit": "06a6c25"
+}

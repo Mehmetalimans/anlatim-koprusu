@@ -1,0 +1,13 @@
+{
+  "_note": "GELİŞTİRME VERİSİ — canlı AI sonucu değildir. is_correct burada YOK; uygulama kodu hesaplar.",
+  "correct": {
+    "strengths": ["Bitiş değerinin dahil olmadığını doğru belirttiniz."],
+    "improvements": ["Başlangıç değerinin (2) dahil olduğunu da açıkça yazmak gerekçenizi tamamlar."],
+    "retry_hint": "Varsayılan birer artışla ve a ≤ b iken range(a, b), b - a tane sayı üretir; bu koşullarla sonucunuzu kontrol edebilirsiniz."
+  },
+  "incorrect": {
+    "strengths": [],
+    "improvements": ["Gerekçeniz bitiş değerinin de yazdırılacağını varsayıyor; kaynaktaki 'bitiş değerine ulaşmadan durur' ifadesini yeniden okuyun."],
+    "retry_hint": "Kaynaktaki range(1, 4) örneğinde 4 yazdırılıyor muydu? Aynı kuralı bu soruya uygulayın."
+  }
+}

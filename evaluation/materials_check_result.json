@@ -1,0 +1,481 @@
+{
+  "checked_at_istanbul": "2026-10-17T19:19:56.223668+03:00",
+  "scope": "Authored data and delivery integrity only. No live model, app flow, semantic scoring or student learning test.",
+  "all_passed": true,
+  "check_count": 90,
+  "failed_count": 0,
+  "checks": [
+    {
+      "name": "demo_count",
+      "passed": true,
+      "detail": "Three prepared course inputs"
+    },
+    {
+      "name": "unique_demo_ids",
+      "passed": true,
+      "detail": [
+        "fizik2_potansiyel",
+        "econ100_firsat_maliyeti",
+        "python_for_range"
+      ]
+    },
+    {
+      "name": "markdown_source_count",
+      "passed": true,
+      "detail": 3
+    },
+    {
+      "name": "fizik2_potansiyel:word_limit",
+      "passed": true,
+      "detail": 142
+    },
+    {
+      "name": "fizik2_potansiyel:source_limit",
+      "passed": true,
+      "detail": 977
+    },
+    {
+      "name": "fizik2_potansiyel:single_phrase",
+      "passed": true,
+      "detail": "birim yük başına düşen elektriksel potansiyel enerjiyi"
+    },
+    {
+      "name": "fizik2_potansiyel:markdown_match",
+      "passed": true,
+      "detail": "JSON matches the authored Markdown source"
+    },
+    {
+      "name": "fizik2_potansiyel:source_urls",
+      "passed": true,
+      "detail": "URL syntax only, not remote access"
+    },
+    {
+      "name": "econ100_firsat_maliyeti:word_limit",
+      "passed": true,
+      "detail": 130
+    },
+    {
+      "name": "econ100_firsat_maliyeti:source_limit",
+      "passed": true,
+      "detail": 978
+    },
+    {
+      "name": "econ100_firsat_maliyeti:single_phrase",
+      "passed": true,
+      "detail": "vazgeçilen en iyi alternatifin değeridir"
+    },
+    {
+      "name": "econ100_firsat_maliyeti:markdown_match",
+      "passed": true,
+      "detail": "JSON matches the authored Markdown source"
+    },
+    {
+      "name": "econ100_firsat_maliyeti:source_urls",
+      "passed": true,
+      "detail": "URL syntax only, not remote access"
+    },
+    {
+      "name": "python_for_range:word_limit",
+      "passed": true,
+      "detail": 128
+    },
+    {
+      "name": "python_for_range:source_limit",
+      "passed": true,
+      "detail": 969
+    },
+    {
+      "name": "python_for_range:single_phrase",
+      "passed": true,
+      "detail": "bitiş değeri dahil değildir"
+    },
+    {
+      "name": "python_for_range:markdown_match",
+      "passed": true,
+      "detail": "JSON matches the authored Markdown source"
+    },
+    {
+      "name": "python_for_range:source_urls",
+      "passed": true,
+      "detail": "URL syntax only, not remote access"
+    },
+    {
+      "name": "content_record_hash",
+      "passed": true,
+      "detail": "Normalize CRLF to LF before checking"
+    },
+    {
+      "name": "feedback_demo_ids",
+      "passed": true,
+      "detail": "Each course has a reference question"
+    },
+    {
+      "name": "fizik2_potansiyel:option_ids",
+      "passed": true,
+      "detail": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ]
+    },
+    {
+      "name": "fizik2_potansiyel:key_present",
+      "passed": true,
+      "detail": "B"
+    },
+    {
+      "name": "fizik2_potansiyel_correct_choice_correct_reason:option_outcome",
+      "passed": true,
+      "detail": "Reference key comparison only, not the app implementation"
+    },
+    {
+      "name": "fizik2_potansiyel_correct_choice_correct_reason:reason_limit",
+      "passed": true,
+      "detail": 90
+    },
+    {
+      "name": "fizik2_potansiyel_correct_choice_correct_reason:not_run",
+      "passed": true,
+      "detail": "No app or model execution claimed"
+    },
+    {
+      "name": "fizik2_potansiyel_wrong_choice_wrong_reason:option_outcome",
+      "passed": true,
+      "detail": "Reference key comparison only, not the app implementation"
+    },
+    {
+      "name": "fizik2_potansiyel_wrong_choice_wrong_reason:reason_limit",
+      "passed": true,
+      "detail": 77
+    },
+    {
+      "name": "fizik2_potansiyel_wrong_choice_wrong_reason:not_run",
+      "passed": true,
+      "detail": "No app or model execution claimed"
+    },
+    {
+      "name": "fizik2_potansiyel_correct_choice_wrong_reason:option_outcome",
+      "passed": true,
+      "detail": "Reference key comparison only, not the app implementation"
+    },
+    {
+      "name": "fizik2_potansiyel_correct_choice_wrong_reason:reason_limit",
+      "passed": true,
+      "detail": 77
+    },
+    {
+      "name": "fizik2_potansiyel_correct_choice_wrong_reason:not_run",
+      "passed": true,
+      "detail": "No app or model execution claimed"
+    },
+    {
+      "name": "fizik2_potansiyel_wrong_choice_correct_reason:option_outcome",
+      "passed": true,
+      "detail": "Reference key comparison only, not the app implementation"
+    },
+    {
+      "name": "fizik2_potansiyel_wrong_choice_correct_reason:reason_limit",
+      "passed": true,
+      "detail": 90
+    },
+    {
+      "name": "fizik2_potansiyel_wrong_choice_correct_reason:not_run",
+      "passed": true,
+      "detail": "No app or model execution claimed"
+    },
+    {
+      "name": "fizik2_potansiyel:all_combinations",
+      "passed": true,
+      "detail": "Four choice/reason combinations"
+    },
+    {
+      "name": "econ100_firsat_maliyeti:option_ids",
+      "passed": true,
+      "detail": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ]
+    },
+    {
+      "name": "econ100_firsat_maliyeti:key_present",
+      "passed": true,
+      "detail": "A"
+    },
+    {
+      "name": "econ100_firsat_maliyeti_correct_choice_correct_reason:option_outcome",
+      "passed": true,
+      "detail": "Reference key comparison only, not the app implementation"
+    },
+    {
+      "name": "econ100_firsat_maliyeti_correct_choice_correct_reason:reason_limit",
+      "passed": true,
+      "detail": 106
+    },
+    {
+      "name": "econ100_firsat_maliyeti_correct_choice_correct_reason:not_run",
+      "passed": true,
+      "detail": "No app or model execution claimed"
+    },
+    {
+      "name": "econ100_firsat_maliyeti_wrong_choice_wrong_reason:option_outcome",
+      "passed": true,
+      "detail": "Reference key comparison only, not the app implementation"
+    },
+    {
+      "name": "econ100_firsat_maliyeti_wrong_choice_wrong_reason:reason_limit",
+      "passed": true,
+      "detail": 79
+    },
+    {
+      "name": "econ100_firsat_maliyeti_wrong_choice_wrong_reason:not_run",
+      "passed": true,
+      "detail": "No app or model execution claimed"
+    },
+    {
+      "name": "econ100_firsat_maliyeti_correct_choice_wrong_reason:option_outcome",
+      "passed": true,
+      "detail": "Reference key comparison only, not the app implementation"
+    },
+    {
+      "name": "econ100_firsat_maliyeti_correct_choice_wrong_reason:reason_limit",
+      "passed": true,
+      "detail": 79
+    },
+    {
+      "name": "econ100_firsat_maliyeti_correct_choice_wrong_reason:not_run",
+      "passed": true,
+      "detail": "No app or model execution claimed"
+    },
+    {
+      "name": "econ100_firsat_maliyeti_wrong_choice_correct_reason:option_outcome",
+      "passed": true,
+      "detail": "Reference key comparison only, not the app implementation"
+    },
+    {
+      "name": "econ100_firsat_maliyeti_wrong_choice_correct_reason:reason_limit",
+      "passed": true,
+      "detail": 106
+    },
+    {
+      "name": "econ100_firsat_maliyeti_wrong_choice_correct_reason:not_run",
+      "passed": true,
+      "detail": "No app or model execution claimed"
+    },
+    {
+      "name": "econ100_firsat_maliyeti:all_combinations",
+      "passed": true,
+      "detail": "Four choice/reason combinations"
+    },
+    {
+      "name": "python_for_range:option_ids",
+      "passed": true,
+      "detail": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ]
+    },
+    {
+      "name": "python_for_range:key_present",
+      "passed": true,
+      "detail": "C"
+    },
+    {
+      "name": "python_for_range_correct_choice_correct_reason:option_outcome",
+      "passed": true,
+      "detail": "Reference key comparison only, not the app implementation"
+    },
+    {
+      "name": "python_for_range_correct_choice_correct_reason:reason_limit",
+      "passed": true,
+      "detail": 88
+    },
+    {
+      "name": "python_for_range_correct_choice_correct_reason:not_run",
+      "passed": true,
+      "detail": "No app or model execution claimed"
+    },
+    {
+      "name": "python_for_range_wrong_choice_wrong_reason:option_outcome",
+      "passed": true,
+      "detail": "Reference key comparison only, not the app implementation"
+    },
+    {
+      "name": "python_for_range_wrong_choice_wrong_reason:reason_limit",
+      "passed": true,
+      "detail": 56
+    },
+    {
+      "name": "python_for_range_wrong_choice_wrong_reason:not_run",
+      "passed": true,
+      "detail": "No app or model execution claimed"
+    },
+    {
+      "name": "python_for_range_correct_choice_wrong_reason:option_outcome",
+      "passed": true,
+      "detail": "Reference key comparison only, not the app implementation"
+    },
+    {
+      "name": "python_for_range_correct_choice_wrong_reason:reason_limit",
+      "passed": true,
+      "detail": 56
+    },
+    {
+      "name": "python_for_range_correct_choice_wrong_reason:not_run",
+      "passed": true,
+      "detail": "No app or model execution claimed"
+    },
+    {
+      "name": "python_for_range_wrong_choice_correct_reason:option_outcome",
+      "passed": true,
+      "detail": "Reference key comparison only, not the app implementation"
+    },
+    {
+      "name": "python_for_range_wrong_choice_correct_reason:reason_limit",
+      "passed": true,
+      "detail": 88
+    },
+    {
+      "name": "python_for_range_wrong_choice_correct_reason:not_run",
+      "passed": true,
+      "detail": "No app or model execution claimed"
+    },
+    {
+      "name": "python_for_range:all_combinations",
+      "passed": true,
+      "detail": "Four choice/reason combinations"
+    },
+    {
+      "name": "feedback_attempt_count",
+      "passed": true,
+      "detail": 12
+    },
+    {
+      "name": "unique_attempt_ids",
+      "passed": true,
+      "detail": 12
+    },
+    {
+      "name": "input_scenario_count",
+      "passed": true,
+      "detail": 12
+    },
+    {
+      "name": "unique_input_ids",
+      "passed": true,
+      "detail": 12
+    },
+    {
+      "name": "source_exactly_6000:fixture_length",
+      "passed": true,
+      "detail": 6000
+    },
+    {
+      "name": "source_6001:fixture_length",
+      "passed": true,
+      "detail": 6001
+    },
+    {
+      "name": "input_scenarios_pending",
+      "passed": true,
+      "detail": "Fixtures are specified expectations, not app test results"
+    },
+    {
+      "name": "code_blank_line_fixture",
+      "passed": true,
+      "detail": "A blank line remains inside the code fence"
+    },
+    {
+      "name": "comparison_grid",
+      "passed": true,
+      "detail": "Six planned real runs"
+    },
+    {
+      "name": "comparisons_live",
+      "passed": true,
+      "detail": "Filled only from key-free live logs in evaluation/live"
+    },
+    {
+      "name": "fizik2_potansiyel_zero_shot:matches_log",
+      "passed": true,
+      "detail": "Output copied verbatim from log"
+    },
+    {
+      "name": "fizik2_potansiyel_with_example:matches_log",
+      "passed": true,
+      "detail": "Output copied verbatim from log"
+    },
+    {
+      "name": "econ100_firsat_maliyeti_zero_shot:matches_log",
+      "passed": true,
+      "detail": "Output copied verbatim from log"
+    },
+    {
+      "name": "econ100_firsat_maliyeti_with_example:matches_log",
+      "passed": true,
+      "detail": "Output copied verbatim from log"
+    },
+    {
+      "name": "python_for_range_zero_shot:matches_log",
+      "passed": true,
+      "detail": "Output copied verbatim from log"
+    },
+    {
+      "name": "python_for_range_with_example:matches_log",
+      "passed": true,
+      "detail": "Output copied verbatim from log"
+    },
+    {
+      "name": "live_logs_no_key",
+      "passed": true,
+      "detail": "No API key in live logs"
+    },
+    {
+      "name": "local_document_links",
+      "passed": true,
+      "detail": {
+        "checked": 36,
+        "missing": []
+      }
+    },
+    {
+      "name": "report_page_count",
+      "passed": true,
+      "detail": 2
+    },
+    {
+      "name": "report_identity",
+      "passed": true,
+      "detail": "Current report identity"
+    },
+    {
+      "name": "presentation_slide_count",
+      "passed": true,
+      "detail": 6
+    },
+    {
+      "name": "presentation_notes_count",
+      "passed": true,
+      "detail": 6
+    },
+    {
+      "name": "presentation_xml",
+      "passed": true,
+      "detail": "XML parses; visual QA is separate"
+    },
+    {
+      "name": "script_word_count",
+      "passed": true,
+      "detail": 434
+    },
+    {
+      "name": "timing_not_measured",
+      "passed": true,
+      "detail": "Word-count estimate only"
+    }
+  ]
+}

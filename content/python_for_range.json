@@ -1,0 +1,22 @@
+{
+  "id": "python_for_range",
+  "subject_label": "Temel Python",
+  "title": "Döngü hangi sayıda durur?",
+  "source_text": "Python'da for döngüsü, bir dizinin veya başka bir yinelenebilir nesnenin elemanlarını sırayla işler. Belirli tam sayılar üzerinde dolaşmak için range kullanılabilir. range(start, stop) yazımında parantez içindeki iki değer, başlangıcı ve bitiş sınırını belirtir. Başlangıç değeri dahildir, bitiş değeri dahil değildir. Adım ayrıca verilmediğinde bir kabul edilir. Böylece range(1, 4), sırasıyla 1, 2 ve 3 değerlerini sağlar. Döngü, 4 değeri için çalışmaz.\n\n```python\nfor sayi in range(1, 4):\n    print(sayi)\n```\n\nBu kodda sayi değişkeni her yinelemede sıradaki değeri alır. Girintili print satırı döngü gövdesidir ve her değer için bir kez çalışır. Çıktı ayrı satırlarda 1, 2 ve 3 olur. Girinti, satırın hangi bloğa ait olduğunu belirlediğinden yalnızca görsel bir tercih değildir. range(4) yazılsaydı başlangıç sıfır kabul edilir ve değerler 0, 1, 2, 3 olurdu. Döngünün kaç kez çalışacağını bulurken başlangıcın dahil, bitişin hariç olduğunu birlikte düşünmek gerekir.",
+  "selected_phrase": "bitiş değeri dahil değildir",
+  "sources": [
+    {
+      "title": "Python resmî öğreticisi, range işlevi",
+      "url": "https://docs.python.org/3/tutorial/controlflow.html#the-range-function"
+    }
+  ],
+  "expected_meaning": "range başlangıç değerini dahil eder, bitiş değerini dahil etmez. for döngüsü değerleri sırayla kullanır; print satırının girintisi ve ayrı çıktı satırları korunur.",
+  "invariants": [
+    "Pozitif varsayılan adımla başlangıç dahil, bitiş hariçtir.",
+    "Örnekte üç yineleme ve üç ayrı çıktı satırı vardır.",
+    "Girintiler, değişken adı ve kod bloğu korunmalıdır.",
+    "Bu metin negatif adımları öğretmez; yeni soruda açıklanmayan ters yönlü adım kullanılmamalıdır."
+  ],
+  "correct_rationale": "İkiyle başlar; beşe gelmeden durur. Bu yüzden 2, 3 ve 4 yazdırır.",
+  "incorrect_rationale": "Başlangıçtan bitişe kadar bütün sayıları içerdiğinden 2, 3, 4, 5 yazdırır."
+}

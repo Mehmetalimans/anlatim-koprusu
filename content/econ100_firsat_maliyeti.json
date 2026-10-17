@@ -1,0 +1,21 @@
+{
+  "id": "econ100_firsat_maliyeti",
+  "subject_label": "Temel ekonomi — ECON 100",
+  "title": "Vazgeçilen seçeneklerden hangisi sayılır?",
+  "source_text": "Zaman ve kaynaklar sınırlı olduğu için bir seçim yapmak, başka bir fırsattan vazgeçmeyi gerektirebilir. Bir tercihin fırsat maliyeti, vazgeçilen en iyi alternatifin değeridir. Buradaki en iyi alternatif, karar veren kişinin koşullarına ve tercihlerine göre belirlenir. Dolayısıyla aynı kararı veren iki kişinin fırsat maliyeti farklı olabilir. Bu değer yalnızca para ile ifade edilmek zorunda değildir.\n\nDeniz'in aynı akşam ders çalışmak, konsere gitmek veya film izlemek için iki saati vardır. Bu etkinlikler aynı zaman aralığındadır ve yalnızca biri yapılabilir. Deniz ders çalışmayı seçer. Ders çalışmasaydı konseri tercih edeceğini, filmi ise konserden daha az istediğini söyler. Bu durumda seçimin fırsat maliyeti, konser deneyiminin Deniz için taşıdığı değerdir. Konser ile filmin değerleri toplanmaz. Deniz o sürede yalnızca birini yapabilir. Bu örnekte Deniz'in tercih sırası karar anında değişmez. Alternatiflerin sırası değişirse değerlendirme de yeniden yapılmalıdır.",
+  "selected_phrase": "vazgeçilen en iyi alternatifin değeridir",
+  "sources": [
+    {
+      "title": "OpenStax, Principles of Economics 3e, Bölüm 2.1",
+      "url": "https://openstax.org/books/principles-economics-3e/pages/2-1-how-individuals-make-choices-based-on-their-budget-constraint"
+    }
+  ],
+  "expected_meaning": "Fırsat maliyeti, aynı anda yapılamayan seçeneklerden vazgeçilen en iyi uygulanabilir alternatifin değeridir. Bütün alternatiflerin toplamı değildir.",
+  "invariants": [
+    "Yalnızca vazgeçilen en iyi uygulanabilir alternatif esas alınır; bütün alternatifler toplanmaz.",
+    "Etkinlikler aynı zaman diliminde birbirini dışlar; tercih sırası açıkça verilmiştir.",
+    "Değer zorunlu olarak parasal değildir; kişinin tercihine bağlıdır."
+  ],
+  "correct_rationale": "Atölye yerine yürüyüşü yapacaktı. Vazgeçtiği en iyi seçenek yürüyüş olduğu için onun değeri esas alınır.",
+  "incorrect_rationale": "İki etkinliği de yapamadığı için yürüyüşün ve filmin değerlerini toplamalıyız."
+}

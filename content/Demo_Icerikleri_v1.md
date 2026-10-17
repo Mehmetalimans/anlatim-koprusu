@@ -1,6 +1,6 @@
 # Anlatım Köprüsü — Üç Ders İçerik Paketi
 
-**Takipçi: Mehmet Ali | 17 Ekim 2026 | MA-01 | Taslak v1**
+**Takipçi: Mehmet Ali | 17 Ekim 2026 | MA-01 | Taslak v1.1**
 
 Bu dosya İrem’in uygulamaya aktaracağı özgün Türkçe demo metinlerini içerir. İrem’in kesin içerik şeması henüz paylaşılmadığı için Markdown biçimindedir. Her “Kaynak metin” bölümü öğrenciye gösterilecek girdidir; kontrol notları ve gerekçeler öğrenci kaynağına eklenmez. Metinlerdeki paragraflar için P1/P2 gibi kimlikleri uygulama üretecektir.
 
@@ -18,11 +18,11 @@ Bu içerikler canlı AI çıktısı veya tamamlanmış uygulama testi değildir.
 
 Elektrostatik bir düzende elektriksel potansiyel, seçilmiş bir referansa göre birim yük başına düşen elektriksel potansiyel enerjiyi ifade eder. Potansiyel V ile, potansiyel enerji U ile gösterilir. Volt ile joule farklı büyüklüklerin birimleridir; bir volt, bir coulomb başına bir joule anlamına gelir. Bu yüzden bir noktadaki potansiyeli söylemek, o noktadaki her yükün aynı enerjiye sahip olduğunu söylemek değildir.
 
-Bir q yükü A noktasından B noktasına taşındığında potansiyel farkı ΔV = V_B − V_A olarak tanımlanır. Potansiyel enerji değişimi ise ΔU = q × ΔV bağıntısıyla hesaplanır. Örneğin +2 C yük, potansiyelin 3 V arttığı bir noktaya taşınırsa enerji değişimi +6 J olur. Aynı noktalar arasında −2 C yük taşınırsa değişim −6 J olur. Bu karşılaştırmada alanı oluşturan düzenin değişmediği ve taşınan yükün bu düzeni etkilemediği varsayılır. Hesapta hem yükün hem potansiyel farkının işaretini korumak gerekir.
+Bir q yükü A noktasından B noktasına taşındığında potansiyel farkı ΔV = V_B − V_A olarak tanımlanır. Burada Δ, son değerden ilk değerin çıkarıldığını gösterir. Potansiyel enerji değişimi ise ΔU = q × ΔV bağıntısıyla hesaplanır. Örneğin +2 C yük, potansiyelin 3 V arttığı bir noktaya taşınırsa enerji değişimi +6 J olur. Aynı noktalar arasında −2 C yük taşınırsa değişim −6 J olur. Bu karşılaştırmada alanı oluşturan düzenin değişmediği ve taşınan yükün bu düzeni etkilemediği varsayılır. Hesapta hem yükün hem potansiyel farkının işaretini korumak gerekir.
 
 ### Beklenen anlam ve korunacak koşullar
 
-- Potansiyel enerji değildir; enerji/yük oranıyla ilişkilidir.
+- Elektriksel potansiyel ile potansiyel enerji farklı büyüklüklerdir. Potansiyel, enerji/yük oranıyla ilişkilidir.
 - Potansiyel farkı son eksi ilk potansiyeldir; ΔU = q × ΔV.
 - Referans seçimi ve sabit dış alan varsayımı kaybolmamalıdır.
 - Pozitif ve negatif yük örneklerinde birim ve işaret korunmalıdır.
@@ -56,7 +56,7 @@ Bu soru sabit bir test örneğidir; canlı model sorusunun aynısı olması gere
 
 Zaman ve kaynaklar sınırlı olduğu için bir seçim yapmak, başka bir fırsattan vazgeçmeyi gerektirebilir. Bir tercihin fırsat maliyeti, vazgeçilen en iyi alternatifin değeridir. Buradaki en iyi alternatif, karar veren kişinin koşullarına ve tercihlerine göre belirlenir. Dolayısıyla aynı kararı veren iki kişinin fırsat maliyeti farklı olabilir. Bu değer yalnızca para ile ifade edilmek zorunda değildir.
 
-Deniz'in aynı akşam ders çalışmak, konsere gitmek veya film izlemek için iki saati vardır. Bu etkinlikler aynı zaman aralığındadır ve yalnızca biri yapılabilir. Deniz ders çalışmayı seçer. Ders çalışmasaydı konseri tercih edeceğini, filmi ise konserden daha az istediğini söyler. Bu durumda seçimin fırsat maliyeti, konser deneyiminin Deniz için taşıdığı değerdir. Konser ile filmin değerleri toplanmaz; ikisi birlikte gerçekleştirilebilen bir seçenek değildir. Örnek, Deniz'in sıralamasının karar anında sabit olduğunu varsayar. Alternatiflerin sırası değişirse değerlendirme de yeniden yapılmalıdır.
+Deniz'in aynı akşam ders çalışmak, konsere gitmek veya film izlemek için iki saati vardır. Bu etkinlikler aynı zaman aralığındadır ve yalnızca biri yapılabilir. Deniz ders çalışmayı seçer. Ders çalışmasaydı konseri tercih edeceğini, filmi ise konserden daha az istediğini söyler. Bu durumda seçimin fırsat maliyeti, konser deneyiminin Deniz için taşıdığı değerdir. Konser ile filmin değerleri toplanmaz. Deniz o sürede yalnızca birini yapabilir. Bu örnekte Deniz'in tercih sırası karar anında değişmez. Alternatiflerin sırası değişirse değerlendirme de yeniden yapılmalıdır.
 
 ### Beklenen anlam ve korunacak koşullar
 
@@ -89,7 +89,7 @@ Deniz'in aynı akşam ders çalışmak, konsere gitmek veya film izlemek için i
 
 ### Kaynak metin
 
-Python'da for döngüsü, bir dizinin veya başka bir yinelenebilir nesnenin elemanlarını sırayla işler. Belirli tam sayılar üzerinde dolaşmak için range kullanılabilir. İki argümanlı range(start, stop) ifadesinde başlangıç değeri dahildir, bitiş değeri dahil değildir. Adım ayrıca verilmediğinde bir kabul edilir. Böylece range(1, 4), sırasıyla 1, 2 ve 3 değerlerini sağlar; 4 için döngü gövdesi çalışmaz.
+Python'da for döngüsü, bir dizinin veya başka bir yinelenebilir nesnenin elemanlarını sırayla işler. Belirli tam sayılar üzerinde dolaşmak için range kullanılabilir. range(start, stop) yazımında parantez içindeki iki değer, başlangıcı ve bitiş sınırını belirtir. Başlangıç değeri dahildir, bitiş değeri dahil değildir. Adım ayrıca verilmediğinde bir kabul edilir. Böylece range(1, 4), sırasıyla 1, 2 ve 3 değerlerini sağlar. Döngü, 4 değeri için çalışmaz.
 
 ```python
 for sayi in range(1, 4):
