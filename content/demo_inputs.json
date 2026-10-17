@@ -1,0 +1,52 @@
+{
+  "format_version": "1.0",
+  "content_revision": "v1.1",
+  "purpose": "Authored source inputs, not live model outputs. Only request fields are passed to generate_bridge.",
+  "items": [
+    {
+      "id": "fizik2_potansiyel",
+      "title": "Aynı gerilim, farklı enerji değişimi",
+      "request": {
+        "source_text": "Elektrostatik bir düzende elektriksel potansiyel, seçilmiş bir referansa göre birim yük başına düşen elektriksel potansiyel enerjiyi ifade eder. Potansiyel V ile, potansiyel enerji U ile gösterilir. Volt ile joule farklı büyüklüklerin birimleridir; bir volt, bir coulomb başına bir joule anlamına gelir. Bu yüzden bir noktadaki potansiyeli söylemek, o noktadaki her yükün aynı enerjiye sahip olduğunu söylemek değildir.\n\nBir q yükü A noktasından B noktasına taşındığında potansiyel farkı ΔV = V_B − V_A olarak tanımlanır. Burada Δ, son değerden ilk değerin çıkarıldığını gösterir. Potansiyel enerji değişimi ise ΔU = q × ΔV bağıntısıyla hesaplanır. Örneğin +2 C yük, potansiyelin 3 V arttığı bir noktaya taşınırsa enerji değişimi +6 J olur. Aynı noktalar arasında −2 C yük taşınırsa değişim −6 J olur. Bu karşılaştırmada alanı oluşturan düzenin değişmediği ve taşınan yükün bu düzeni etkilemediği varsayılır. Hesapta hem yükün hem potansiyel farkının işaretini korumak gerekir.",
+        "selected_phrase": "birim yük başına düşen elektriksel potansiyel enerjiyi",
+        "subject_label": "Fizik 2 — Elektrik"
+      },
+      "sources": [
+        {
+          "title": "OpenStax, University Physics Volume 2, Bölüm 7.2",
+          "url": "https://openstax.org/books/university-physics-volume-2/pages/7-2-electric-potential-and-potential-difference"
+        }
+      ]
+    },
+    {
+      "id": "econ100_firsat_maliyeti",
+      "title": "Vazgeçilen seçeneklerden hangisi sayılır?",
+      "request": {
+        "source_text": "Zaman ve kaynaklar sınırlı olduğu için bir seçim yapmak, başka bir fırsattan vazgeçmeyi gerektirebilir. Bir tercihin fırsat maliyeti, vazgeçilen en iyi alternatifin değeridir. Buradaki en iyi alternatif, karar veren kişinin koşullarına ve tercihlerine göre belirlenir. Dolayısıyla aynı kararı veren iki kişinin fırsat maliyeti farklı olabilir. Bu değer yalnızca para ile ifade edilmek zorunda değildir.\n\nDeniz'in aynı akşam ders çalışmak, konsere gitmek veya film izlemek için iki saati vardır. Bu etkinlikler aynı zaman aralığındadır ve yalnızca biri yapılabilir. Deniz ders çalışmayı seçer. Ders çalışmasaydı konseri tercih edeceğini, filmi ise konserden daha az istediğini söyler. Bu durumda seçimin fırsat maliyeti, konser deneyiminin Deniz için taşıdığı değerdir. Konser ile filmin değerleri toplanmaz. Deniz o sürede yalnızca birini yapabilir. Bu örnekte Deniz'in tercih sırası karar anında değişmez. Alternatiflerin sırası değişirse değerlendirme de yeniden yapılmalıdır.",
+        "selected_phrase": "vazgeçilen en iyi alternatifin değeridir",
+        "subject_label": "Temel ekonomi — ECON 100"
+      },
+      "sources": [
+        {
+          "title": "OpenStax, Principles of Economics 3e, Bölüm 2.1",
+          "url": "https://openstax.org/books/principles-economics-3e/pages/2-1-how-individuals-make-choices-based-on-their-budget-constraint"
+        }
+      ]
+    },
+    {
+      "id": "python_for_range",
+      "title": "Döngü hangi sayıda durur?",
+      "request": {
+        "source_text": "Python'da for döngüsü, bir dizinin veya başka bir yinelenebilir nesnenin elemanlarını sırayla işler. Belirli tam sayılar üzerinde dolaşmak için range kullanılabilir. range(start, stop) yazımında parantez içindeki iki değer, başlangıcı ve bitiş sınırını belirtir. Başlangıç değeri dahildir, bitiş değeri dahil değildir. Adım ayrıca verilmediğinde bir kabul edilir. Böylece range(1, 4), sırasıyla 1, 2 ve 3 değerlerini sağlar. Döngü, 4 değeri için çalışmaz.\n\n```python\nfor sayi in range(1, 4):\n    print(sayi)\n```\n\nBu kodda sayi değişkeni her yinelemede sıradaki değeri alır. Girintili print satırı döngü gövdesidir ve her değer için bir kez çalışır. Çıktı ayrı satırlarda 1, 2 ve 3 olur. Girinti, satırın hangi bloğa ait olduğunu belirlediğinden yalnızca görsel bir tercih değildir. range(4) yazılsaydı başlangıç sıfır kabul edilir ve değerler 0, 1, 2, 3 olurdu. Döngünün kaç kez çalışacağını bulurken başlangıcın dahil, bitişin hariç olduğunu birlikte düşünmek gerekir.",
+        "selected_phrase": "bitiş değeri dahil değildir",
+        "subject_label": "Temel Python"
+      },
+      "sources": [
+        {
+          "title": "Python resmî öğreticisi, range işlevi",
+          "url": "https://docs.python.org/3/tutorial/controlflow.html#the-range-function"
+        }
+      ]
+    }
+  ]
+}

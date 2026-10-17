@@ -1,0 +1,83 @@
+{
+  "purpose": "Empty records for six real runs. No scores or model outputs have been invented.",
+  "records": [
+    {
+      "id": "fizik2_potansiyel_zero_shot",
+      "demo_id": "fizik2_potansiyel",
+      "prompt_variant": "zero_shot",
+      "model_name": null,
+      "prompt_version": null,
+      "actual_output": null,
+      "meaning_review": null,
+      "reference_review": null,
+      "question_review": null,
+      "execution_status": "not_run",
+      "task": "generate_bridge"
+    },
+    {
+      "id": "fizik2_potansiyel_with_example",
+      "demo_id": "fizik2_potansiyel",
+      "prompt_variant": "with_example",
+      "model_name": null,
+      "prompt_version": null,
+      "actual_output": null,
+      "meaning_review": null,
+      "reference_review": null,
+      "question_review": null,
+      "execution_status": "not_run",
+      "task": "generate_bridge"
+    },
+    {
+      "id": "econ100_firsat_maliyeti_zero_shot",
+      "demo_id": "econ100_firsat_maliyeti",
+      "prompt_variant": "zero_shot",
+      "model_name": null,
+      "prompt_version": null,
+      "actual_output": null,
+      "meaning_review": null,
+      "reference_review": null,
+      "question_review": null,
+      "execution_status": "not_run",
+      "task": "generate_bridge"
+    },
+    {
+      "id": "econ100_firsat_maliyeti_with_example",
+      "demo_id": "econ100_firsat_maliyeti",
+      "prompt_variant": "with_example",
+      "model_name": null,
+      "prompt_version": null,
+      "actual_output": null,
+      "meaning_review": null,
+      "reference_review": null,
+      "question_review": null,
+      "execution_status": "not_run",
+      "task": "generate_bridge"
+    },
+    {
+      "id": "python_for_range_zero_shot",
+      "demo_id": "python_for_range",
+      "prompt_variant": "zero_shot",
+      "model_name": null,
+      "prompt_version": null,
+      "actual_output": null,
+      "meaning_review": null,
+      "reference_review": null,
+      "question_review": null,
+      "execution_status": "not_run",
+      "task": "generate_bridge"
+    },
+    {
+      "id": "python_for_range_with_example",
+      "demo_id": "python_for_range",
+      "prompt_variant": "with_example",
+      "model_name": null,
+      "prompt_version": null,
+      "actual_output": null,
+      "meaning_review": null,
+      "reference_review": null,
+      "question_review": null,
+      "execution_status": "not_run",
+      "task": "generate_bridge"
+    }
+  ]
+}

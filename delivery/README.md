@@ -15,6 +15,11 @@ Bu klasördeki PDF ve PPTX, uygulama geliştirmesi sürerken hazırlanan **tasla
 - [İrem'den beklenecek ilk teknik devir](../docs/Irem_Teknik_Devir_Ihtiyaclari.md)
 - [Güncel yerel içerik kontrolleri](../evaluation/Icerik_Kontrol_Sonuclari_v2.json)
 - [Varsayımlara dayalı konuşma süre hesabı](../evaluation/Prova_Sure_Tahmini_v2.json)
+- [Doğrudan kullanılabilir üç JSON girdisi](../content/demo_inputs.json)
+- [On iki şık/gerekçe denemesi](../evaluation/feedback_reference_cases.json)
+- [On iki girdi senaryosu](../evaluation/input_reference_cases.json)
+- [Referans paketini kullanma](../evaluation/Referans_Paketini_Kullanma.md)
+- [Dosya/veri bütünlüğü kontrol sonucu](../evaluation/materials_check_result.json)
 
 Rapor ve PPTX v1, ilk hazırlık durumunu gösteren taslaklardır. Rapordaki 134/130/121 kelime sayıları ilk içerik sürümüne aittir. Öğrenci odaklı düzenlemeden sonra güncel sayılar 142/130/128'dir ve v2 içerik kontrol kaydında tutulur. İngilizce konuşma için güncel dosya v2'dir. Son teslimde PDF ve PPTX gerçek teknik sonuçlarla birlikte güncellenecektir.
 
@@ -24,6 +29,7 @@ Rapor ve PPTX v1, ilk hazırlık durumunu gösteren taslaklardır. Rapordaki 134
 | --- | --- |
 | Üç ders metni ve referans gerekçeler | Hazır, uygulamaya aktarma şeması bekleniyor |
 | Metin uzunlukları ve tekil ifade kontrolleri | Yerel kontrol tamamlandı |
+| JSON girdileri ve sabit referans denemeleri | Hazır; gerçek servisle denemeler bekliyor |
 | Örnek fizik hesapları ve range değerleri | Yerel kontrol tamamlandı |
 | PDF rapor, İngilizce PPTX ve konuşma | İlk taslak hazır |
 | Model/API erişimi ve çalışan uygulama | İrem'in teknik teslimi bekleniyor |
@@ -42,3 +48,5 @@ Rapor ve PPTX v1, ilk hazırlık durumunu gösteren taslaklardır. Rapordaki 134
 6. Ekip rapor, kod, sunum ve video bağlantılarının erişimini kontrol eder. Son teslim dosyaları son sürüm olarak ayrı adlandırılır.
 
 İçerik kontrolleri uygulama testleriyle karıştırılmaz. Test planındaki beklenen davranışlar, gerçek sonuç olarak raporlanmaz.
+
+Dosya/veri kontrolü `evaluation/check_materials.py` ile tekrar çalıştırılabilir. Bu kontrolün başarılı olması, canlı model veya uygulama kabul testlerinin geçtiği anlamına gelmez.
