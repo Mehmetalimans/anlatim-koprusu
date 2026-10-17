@@ -1,8 +1,6 @@
-# İrem - İngilizce okuma kartı
+# İrem — İngilizce okuma kartı
 
-Konuşulacak toplam metin: 278 kelime. Bu sayı süre ölçümü değildir. Gerçek okuma süresi henüz kaydedilmedi.
-
-Her satırın sonunda doğal bir durak ver. Zor gelen kelimeyi veya cümleyi işaretle. Uygulama cümleleri, ekranda gerçekten gösterilen sürümle doğrulanmalıdır.
+Konuşulacak toplam metin: 280 kelime. Gerçek süre henüz ölçülmedi. Canlı uygulama cümleleri kayıtta gerçekten gösterilen davranışla örtüşmeli.
 
 ## B. 0:40-1:10 - How it works / İrem
 
@@ -49,10 +47,10 @@ We also review the demo answer keys because AI can make mistakes.
 ## H. 4:00-4:35 - Prompts and checks / İrem
 
 We use separate prompts for explanations and feedback.
-Our test plan compares a prompt without an example and a prompt with an example.
-We use the same texts for both.
-We check the meaning, the questions and the feedback.
-This comparison has not been completed yet.
+Sixty-eight automated tests passed with controlled responses and no live model calls.
+We still need to compare the two prompts using the same texts.
+We will check the meaning, the questions and the feedback.
+Learning gains have not been measured.
 
 ## Prova kaydı
 

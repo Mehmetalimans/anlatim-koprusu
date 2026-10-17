@@ -7,14 +7,43 @@ import streamlit as st
 
 from core.contracts import AttemptFeedback, BridgeResult
 from core.services import DEV_LABEL
-from core.source import Segment
+from core.source import Segment, UnclosedCodeFence, split_source
 
 _MD_SPECIAL = re.compile(r"([\\`*_{}\[\]()#+\-.!|<>~$])")
+_MATH = re.compile(r"\$\$(.+?)\$\$|\\\[(.+?)\\\]|\\\((.+?)\\\)|(?<!\\)\$([^$\n]+)(?<!\\)\$", re.DOTALL)
 
 
 def md_escape(text: str) -> str:
     """Düz metni markdown yorumlamadan göstermek için kaçışlar; satır sonlarını korur."""
     return _MD_SPECIAL.sub(r"\\\1", text).replace("\n", "  \n")
+
+
+def _render_prose(text: str) -> None:
+    """Düzyazıyı kaçırır; açık matematik işaretlerini güvenli matematik görünümüne verir."""
+    cursor = 0
+    for match in _MATH.finditer(text):
+        before = text[cursor:match.start()]
+        if before.strip():
+            st.markdown(md_escape(before))
+        formula = next(group for group in match.groups() if group is not None)
+        st.latex(formula.strip())
+        cursor = match.end()
+    if text[cursor:].strip():
+        st.markdown(md_escape(text[cursor:]))
+
+
+def render_learning_text(text: str) -> None:
+    """Kod bloklarını gösterir, çalıştırmaz. Diğer metin HTML olarak işlenmez."""
+    try:
+        segments = split_source(text)
+    except UnclosedCodeFence:
+        st.markdown(md_escape(text))
+        return
+    for segment in segments:
+        if segment.kind == "code":
+            st.code(segment.text, language=segment.lang or "python")
+        else:
+            _render_prose(segment.text)
 
 
 def dev_banner() -> None:
@@ -30,7 +59,7 @@ def render_source(segments: list[Segment], refs: list[str]) -> None:
             if seg.kind == "code":
                 st.code(seg.text, language=seg.lang or "python")
             else:
-                st.markdown(md_escape(seg.text))
+                _render_prose(seg.text)
 
 
 def render_bridge(bridge: BridgeResult) -> None:
@@ -41,25 +70,25 @@ def render_bridge(bridge: BridgeResult) -> None:
         return
 
     st.subheader("Sade açıklama")
-    st.markdown(md_escape(bridge.simple_explanation))
+    render_learning_text(bridge.simple_explanation)
     if bridge.source_refs:
         st.caption("Dayandığı kaynak parçaları: " + ", ".join(bridge.source_refs))
 
     if bridge.terms:
         st.subheader("Terim kartları")
-        cols = st.columns(min(len(bridge.terms), 3))
+        cols = st.columns(min(len(bridge.terms), 2))
         for i, t in enumerate(bridge.terms):
             with cols[i % len(cols)]:
                 with st.container(border=True):
                     st.markdown(f"**{md_escape(t.term)}**")
                     st.caption("Kaynakta geçiyor" if t.origin == "source" else "Destekleyici terim (kaynakta yok)")
-                    st.write(md_escape(t.explanation))
+                    render_learning_text(t.explanation)
 
     if bridge.example:
         st.subheader("Ek örnek")
         with st.container(border=True):
             st.caption("Yapay zekâ tarafından üretildi — kaynakta yer almıyor")
-            st.markdown(md_escape(bridge.example.text))
+            render_learning_text(bridge.example.text)
 
     for w in bridge.warnings:
         st.warning(md_escape(w))
@@ -84,4 +113,4 @@ def render_feedback(fb: AttemptFeedback, answer_explanation: str) -> None:
         st.caption("Neden doğru: " + md_escape(answer_explanation))
     else:
         with st.expander("Doğru cevabı göster"):
-            st.markdown(md_escape(answer_explanation))
+            render_learning_text(answer_explanation)

@@ -4,13 +4,13 @@ Bu paket İrem'in koduna bağlı olmadan hazırlanmıştır. Veriler uygulama/mo
 
 ## Üç doğrudan kullanılabilir girdi
 
-[demo_inputs.json](../content/demo_inputs.json) üç dersin kaynak metnini, seçilen ifadesini, ders etiketini ve kaynak bağlantısını içerir. Her öğenin `request` alanı ortak plandaki `BridgeRequest` alanlarına karşılık gelir:
+[demo_inputs.json](../evaluation/demo_inputs.json) üç dersin kaynak metnini, seçilen ifadesini, ders etiketini ve kaynak bağlantısını içerir. Her öğenin `request` alanı ortak plandaki `BridgeRequest` alanlarına karşılık gelir:
 
 ```python
 import json
 from pathlib import Path
 
-items = json.loads(Path("content/demo_inputs.json").read_text(encoding="utf-8"))["items"]
+items = json.loads(Path("evaluation/demo_inputs.json").read_text(encoding="utf-8"))["items"]
 request_fields = items[0]["request"]
 # Gerçek sözleşme geldiğinde BridgeRequest(**request_fields) ile kullanılabilir.
 ```

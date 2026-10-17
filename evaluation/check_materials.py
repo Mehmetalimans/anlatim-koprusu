@@ -25,7 +25,7 @@ def run_checks():
     source_file = ROOT / 'content/Demo_Icerikleri_v1.md'
     markdown = source_file.read_text(encoding='utf-8')
     originals = re.findall(r'### Kaynak metin\n\n(.*?)\n### Beklenen anlam', markdown, re.S)
-    data = load('content/demo_inputs.json')
+    data = load('evaluation/demo_inputs.json')
     items = data['items']
     check('demo_count', len(items) == 3, 'Three prepared course inputs')
     ids = [item['id'] for item in items]
@@ -103,17 +103,17 @@ def run_checks():
                     missing_links.append(str(file.relative_to(ROOT)) + ':' + href)
     check('local_document_links', not missing_links, {'checked': len(local_links), 'missing': missing_links})
 
-    pdf = ROOT / 'delivery/Anlatim_Koprusu_Rapor_Taslagi_v1.pdf'
+    pdf = ROOT / 'delivery/Anlatim_Koprusu_Rapor_Taslagi_v2.pdf'
     try:
         from pypdf import PdfReader
         reader = PdfReader(pdf)
         check('report_page_count', 1 <= len(reader.pages) <= 2, len(reader.pages))
         report_text = '\n'.join(page.extract_text() or '' for page in reader.pages)
-        check('report_draft_label', 'teslim sürümü değildir' in report_text, 'The report is a development draft')
+        check('report_draft_label', 'Çevrimdışı kabul sonrası taslak v2' in ' '.join(report_text.split()), 'The report is a development draft')
     except ImportError:
         check('report_pdf_reader', False, 'Install pypdf or use the documented bundled Python runtime')
 
-    pptx = ROOT / 'delivery/Anlatim_Koprusu_English_Deck_Draft_v1.pptx'
+    pptx = ROOT / 'delivery/Anlatim_Koprusu_English_Deck_Draft_v2.pptx'
     with zipfile.ZipFile(pptx) as z:
         slides = [n for n in z.namelist() if re.fullmatch(r'ppt/slides/slide\d+\.xml', n)]
         notes = [n for n in z.namelist() if re.fullmatch(r'ppt/notesSlides/notesSlide\d+\.xml', n)]

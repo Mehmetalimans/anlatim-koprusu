@@ -1,5 +1,5 @@
 {
-  "checked_at_istanbul": "2026-10-17T16:43:07.957063+03:00",
+  "checked_at_istanbul": "2026-10-17T17:40:58.612425+03:00",
   "scope": "Authored data and delivery integrity only. No live model, app flow, semantic scoring or student learning test.",
   "all_passed": true,
   "check_count": 83,
@@ -403,7 +403,7 @@
       "name": "local_document_links",
       "passed": true,
       "detail": {
-        "checked": 25,
+        "checked": 32,
         "missing": []
       }
     },
@@ -435,7 +435,7 @@
     {
       "name": "script_word_count",
       "passed": true,
-      "detail": 432
+      "detail": 434
     },
     {
       "name": "timing_not_measured",

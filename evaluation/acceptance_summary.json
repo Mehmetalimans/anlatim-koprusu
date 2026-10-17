@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-17",
+  "branch": "codex/acceptance",
+  "irem_source_commit": "3e9a4ac",
+  "integration_merge_commit": "d0f8e9a",
+  "scope": "Offline technical acceptance with recorded responses; network blocked, no real model calls.",
+  "automated_tests": {
+    "tests": 68,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "junit_timestamp": "2026-10-17T17:30:39.550250+03:00",
+  "acceptance_headings": {
+    "offline_passed": 10,
+    "partial": 9,
+    "pending": 1
+  },
+  "live_api": {
+    "status": "not_verified",
+    "user_report": "Irem obtained an API key; successful call not confirmed.",
+    "local_key_present": false,
+    "local_check": "Stopped before network request because GEMINI_API_KEY was absent.",
+    "configured_default_model": "gemini-3.5-flash-lite",
+    "verified_model": null
+  },
+  "pending": [
+    "Real API access and model name",
+    "Three-course semantic review",
+    "Rationale-aware feedback review",
+    "Zero-shot vs few-shot real comparison",
+    "Timed English rehearsal and video",
+    "Second-computer setup and delivery access check"
+  ],
+  "evidence": "evaluation/Kabul_Sonuclari_20261017.md"
+}

@@ -12,7 +12,7 @@ Ekran: Kapak ve akademik ifade örneği.
 
 ## B. 0:40-1:10 - How it works / İrem
 
-Ekran: Öğrenme döngüsü, ardından uygulama. Teknik sürüm geldikten sonra doğrulanacak bölüm.
+Ekran: Öğrenme döngüsü, ardından uygulama. Yerel arayüz doğrulandı; canlı model gösterimi ayrıca doğrulanacak.
 
 > We use Python and Streamlit. The student chooses a text and copies a difficult phrase. The model gives an explanation and a separate example. It also creates a question. The student chooses an answer and writes a short reason. The app needs internet access for the model. We will show the full process with an economics example.
 
@@ -50,7 +50,7 @@ Ekran: Üç ders slaytı. Çalışan fizik ve Python örneklerini kısaca göste
 
 Ekran: Prompt yaklaşımı ve gerçek değerlendirme kaydı. Şimdilik aşağıdaki paragraf hazırlık durumunu doğru anlatır. Son kayıtta karşılaştırma tamamlandıysa son cümleyi gerçek bulgu ve kullanılan model adıyla değiştir. Sonuç uydurma.
 
-> We use separate prompts for explanations and feedback. Our test plan compares a prompt without an example and a prompt with an example. We use the same texts for both. We check the meaning, the questions and the feedback. This comparison has not been completed yet.
+> We use separate prompts for explanations and feedback. Sixty-eight automated tests passed with controlled responses and no live model calls. We still need to compare the two prompts using the same texts. We will check the meaning, the questions and the feedback. Learning gains have not been measured.
 
 ## I. 4:35-5:00 - Social impact and limits / Mehmet Ali
 

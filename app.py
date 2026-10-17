@@ -21,13 +21,13 @@ from core.contracts import BridgeError
 from core.gemini_client import DEFAULT_MODEL
 from core.services import check_request, evaluate_attempt, generate_bridge, prompt_version
 from ui import state as S
-from ui.views import dev_banner, md_escape, render_bridge, render_feedback, render_source
+from ui.views import dev_banner, render_bridge, render_feedback, render_learning_text, render_source
 
 log = logging.getLogger("anlatim_koprusu")
 OWN_TEXT = "✍️ Kendi metnim"
 MODE_LIVE, MODE_DEV = "Canlı (Gemini)", "Geliştirme verisi"
 
-st.set_page_config(page_title="Anlatım Köprüsü", page_icon="🌉", layout="centered")
+st.set_page_config(page_title="Anlatım Köprüsü", page_icon="🌉", layout="wide")
 
 # ---------------------------------------------------------------- içerik
 report = load_lessons()
@@ -87,6 +87,11 @@ source_text = st.session_state["source_text"]
 phrase = st.session_state["phrase"]
 subject = st.session_state["subject"] or None
 fp = S.fingerprint(source_text, phrase, subject)
+generation_context = (mode, dev_kind, prompt_version(), os.getenv("GEMINI_MODEL") or DEFAULT_MODEL)
+previous_context = st.session_state.get("generation_context")
+if previous_context is not None and previous_context != generation_context:
+    S.clear_work(st.session_state)
+st.session_state["generation_context"] = generation_context
 S.sync_work(st.session_state, fp)  # girdi değiştiyse eski çalışmayı temizle
 
 explain_clicked = st.button("Açıkla", type="primary")
@@ -107,17 +112,20 @@ if work is not None:
     bridge = work["bridge"]
     if work["is_dev"]:
         dev_banner()
-    try:
-        _, segments, _ = check_request(source_text, phrase, subject)
-        render_source(segments, bridge.source_refs)
-    except BridgeError:
-        pass
-    render_bridge(bridge)
+    source_column, explanation_column = st.columns(2)
+    with source_column:
+        try:
+            _, segments, _ = check_request(source_text, phrase, subject)
+            render_source(segments, bridge.source_refs)
+        except BridgeError:
+            pass
+    with explanation_column:
+        render_bridge(bridge)
 
     if bridge.status == "ready" and bridge.quiz is not None:
         quiz = bridge.quiz
         st.subheader("Kendini dene")
-        st.markdown(md_escape(quiz.question))
+        render_learning_text(quiz.question)
         texts = {o.id: o.text for o in quiz.options}
         nonce = st.session_state.get(S.NONCE, 0)
         with st.form(key=f"answer_form_{nonce}"):

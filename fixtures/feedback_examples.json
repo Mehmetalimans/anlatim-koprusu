@@ -3,7 +3,7 @@
   "correct": {
     "strengths": ["Bitiş değerinin dahil olmadığını doğru belirttiniz."],
     "improvements": ["Başlangıç değerinin (2) dahil olduğunu da açıkça yazmak gerekçenizi tamamlar."],
-    "retry_hint": "range(a, b) her zaman b - a tane sayı üretir; bu kuralla sonucunuzu hızlıca kontrol edebilirsiniz."
+    "retry_hint": "Varsayılan birer artışla ve a ≤ b iken range(a, b), b - a tane sayı üretir; bu koşullarla sonucunuzu kontrol edebilirsiniz."
   },
   "incorrect": {
     "strengths": [],

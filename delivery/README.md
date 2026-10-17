@@ -1,52 +1,45 @@
-# Teslim hazırlığı - Taslak v1
+# Teslim hazırlığı — Çevrimdışı kabul sonrası taslak v2
 
-Bu klasördeki PDF ve PPTX, uygulama geliştirmesi sürerken hazırlanan **taslaklardır**. Başlangıç dayanağı `9237a4e` commit'idir. Çalışan uygulama ve gerçek test sonuçları gelmeden son teslim dosyaları olarak kullanılmamalıdır.
+İrem'in `3e9a4ac` uygulama teslimi üç ders içeriğiyle birleştirildi. Temiz kurulum ve **68 çevrimdışı otomatik test** tamamlandı. Canlı API erişimi, gerçek model anlam incelemesi, prompt karşılaştırması ve video bekliyor. PDF/PPTX son teslim sürümü değildir.
 
-## Dosyalar
+## Güncel dosyalar
 
-- [İki sayfalık Türkçe rapor taslağı](Anlatim_Koprusu_Rapor_Taslagi_v1.pdf)
-- [Altı slaytlık İngilizce sunum taslağı](Anlatim_Koprusu_English_Deck_Draft_v1.pptx)
-- [Raporun düzenlenebilir metni](../docs/Rapor_Taslagi_v1.md)
-- [Sunumun düzenlenebilir metni](../docs/Ingilizce_Sunum_Metni_v1.md)
-- [Güncel İngilizce demo konuşması ve ekran akışı](../docs/Demo_Konusmasi_EN_v2.md)
-- [Mehmet Ali'nin ayrı okuma kartı](../docs/Prova_Mehmet_Ali_EN.md)
-- [İrem'in ayrı okuma kartı](../docs/Prova_Irem_EN.md)
-- [Öğrenci gözüyle içerik incelemesi](../evaluation/Ogrenci_Gozuyle_Icerik_Incelemesi.md)
-- [İrem'den beklenecek ilk teknik devir](../docs/Irem_Teknik_Devir_Ihtiyaclari.md)
-- [Güncel yerel içerik kontrolleri](../evaluation/Icerik_Kontrol_Sonuclari_v2.json)
-- [Varsayımlara dayalı konuşma süre hesabı](../evaluation/Prova_Sure_Tahmini_v2.json)
-- [Doğrudan kullanılabilir üç JSON girdisi](../content/demo_inputs.json)
-- [On iki şık/gerekçe denemesi](../evaluation/feedback_reference_cases.json)
-- [On iki girdi senaryosu](../evaluation/input_reference_cases.json)
+- [İki sayfalık Türkçe rapor v2](Anlatim_Koprusu_Rapor_Taslagi_v2.pdf)
+- [Altı slaytlık İngilizce sunum v2](Anlatim_Koprusu_English_Deck_Draft_v2.pptx)
+- [Raporun düzenlenebilir metni](../docs/Rapor_Taslagi_v2.md)
+- [Sunum metni ve notları](../docs/Ingilizce_Sunum_Metni_v2.md)
+- [Kabul sonuçları ve bekleyen kapsam](../evaluation/Kabul_Sonuclari_20261017.md)
+- [İrem / Claude için sonraki görevler](../docs/Irem_Kabul_Devir_Notu.md)
+- [İngilizce demo konuşması](../docs/Demo_Konusmasi_EN_v2.md)
+- [Mehmet Ali okuma kartı](../docs/Prova_Mehmet_Ali_EN.md)
+- [İrem okuma kartı](../docs/Prova_Irem_EN.md)
+- [Konuşma süre tahmini](../evaluation/Prova_Sure_Tahmini_v2.json)
+- [68 testin gerçek kaydı](../evaluation/offline_acceptance_results.xml)
+- [İçerik/dosya bütünlüğü](../evaluation/materials_check_result.json)
 - [Referans paketini kullanma](../evaluation/Referans_Paketini_Kullanma.md)
-- [Dosya/veri bütünlüğü kontrol sonucu](../evaluation/materials_check_result.json)
 
-Rapor ve PPTX v1, ilk hazırlık durumunu gösteren taslaklardır. Rapordaki 134/130/121 kelime sayıları ilk içerik sürümüne aittir. Öğrenci odaklı düzenlemeden sonra güncel sayılar 142/130/128'dir ve v2 içerik kontrol kaydında tutulur. İngilizce konuşma için güncel dosya v2'dir. Son teslimde PDF ve PPTX gerçek teknik sonuçlarla birlikte güncellenecektir.
+## Durum
 
-## Mevcut durum
-
-| İş | Durum |
+| İş | Gerçek durum |
 | --- | --- |
-| Üç ders metni ve referans gerekçeler | Hazır, uygulamaya aktarma şeması bekleniyor |
-| Metin uzunlukları ve tekil ifade kontrolleri | Yerel kontrol tamamlandı |
-| JSON girdileri ve sabit referans denemeleri | Hazır; gerçek servisle denemeler bekliyor |
-| Örnek fizik hesapları ve range değerleri | Yerel kontrol tamamlandı |
-| PDF rapor, İngilizce PPTX ve konuşma | İlk taslak hazır |
-| Model/API erişimi ve çalışan uygulama | İrem'in teknik teslimi bekleniyor |
-| 20 uygulama kabul senaryosu | Henüz çalıştırılmadı |
-| Prompt karşılaştırması | Gerçek çağrılar bekleniyor |
-| Video kaydı ve süre provası | Canlı akıştan sonra yapılacak |
-| Son rapor/slayt güncellemesi ve teslim formu | Bekliyor |
+| Üç dersin JSON içeriği | Uygulamaya bağlandı; kaynaklar 142/130/128 kelime |
+| Temiz kurulum ve yerel tarayıcı | Tamamlandı |
+| Teknik testler | 68 geçti; kontrollü yanıtlar, canlı ağ yok |
+| Yirmi kabul başlığı | 10 çevrimdışı tamamlandı, 9 kısmi, 1 bekliyor |
+| API anahtarı | İrem'in aldığı bildirildi; başarılı çağrı kaydı doğrulanmadı |
+| Canlı içerik/gerekçe değerlendirmesi | Bekliyor |
+| İki promptun gerçek karşılaştırması | Bekliyor |
+| PDF/PPTX | Çevrimdışı sonuçlarla güncellenmiş v2 taslak |
+| Sesli süre provası ve İngilizce video | Bekliyor |
+| Hedef kitle erişimi ve teslim formu | Bekliyor |
 
-## Son teslim sürümüne geçiş
+## Son sürüme geçiş
 
-1. İrem'in model adı, kurulum bilgileri ve çalışan commit'i alınır.
-2. Mehmet Ali kendi bilgisayarında kurulum ve kabul testlerini kaydeder.
-3. Prompt karşılaştırmasının gerçek çıktıları ve bulguları eklenir.
-4. Rapor ve sunumdaki hazırlık durumları gerçek sonuçlarla güncellenir. Ölçülmemiş öğrenme kazanımı iddia edilmez.
-5. İngilizce demo gerçek çağrılarla prova edilir ve kaydedilir. Slaytlar canlı uygulama gösteriminin yerine geçmez.
-6. Ekip rapor, kod, sunum ve video bağlantılarının erişimini kontrol eder. Son teslim dosyaları son sürüm olarak ayrı adlandırılır.
+1. İrem gerçek model ve anahtar içermeyen başarılı çağrı kaydını paylaşır.
+2. Üç dersin canlı çıktıları, soru anahtarları ve gerekçeye dayalı geri bildirim incelenir.
+3. Aynı girdilerle iki promptun gerçek çıktıları karşılaştırılır.
+4. PDF/PPTX gerçek sonuçlarla güncellenir; ölçülmeyen öğrenme kazanımı iddia edilmez.
+5. Gerçek arayüzde İngilizce prova ve yaklaşık beş dakikalık video yapılır.
+6. Başka bilgisayarda kurulum ve teslim bağlantılarının erişimi kontrol edilir.
 
-İçerik kontrolleri uygulama testleriyle karıştırılmaz. Test planındaki beklenen davranışlar, gerçek sonuç olarak raporlanmaz.
-
-Dosya/veri kontrolü `evaluation/check_materials.py` ile tekrar çalıştırılabilir. Bu kontrolün başarılı olması, canlı model veya uygulama kabul testlerinin geçtiği anlamına gelmez.
+`v1` dosyaları tarihsel taslaklardır. Geliştirme verisi canlı çıktı olarak sunulmaz. Dosya bütünlüğü, kontrollü uygulama testi ve gerçek model anlam incelemesi ayrı kanıtlardır.

@@ -1,0 +1,14 @@
+{
+  "mode_switch": {
+    "mode": "Canlı (Gemini)",
+    "retained_dev_work": true,
+    "answer_form_remains": true,
+    "app_exceptions": 0
+  },
+  "question_code": {
+    "code_element_count": 1,
+    "source_code_only": true,
+    "escaped_fence_visible": true,
+    "app_exceptions": 0
+  }
+}

@@ -50,7 +50,7 @@ Yanıtı yalnızca istenen JSON şemasında ver."""
 _FEW_SHOT_EXAMPLE = """Örnek (biçim referansı; demo derslerinden farklı bir konu):
 Girdi: segments=[{"id":"P1","kind":"prose","text":"Ozmozda su, yarı geçirgen zardan çözünen derişimi düşük taraftan yüksek tarafa geçer."}], selected_phrase="çözünen derişimi düşük taraftan yüksek tarafa"
 Çıktı:
-{"status":"ready","simple_explanation":"Ozmozda hareket eden şey sudur, çözünen madde değildir. Su, içinde daha az çözünmüş madde bulunan taraftan daha çok çözünmüş madde bulunan tarafa geçer. Böylece iki taraftaki derişim farkı azalmaya yönelir.","source_refs":["P1"],"terms":[{"term":"yarı geçirgen zar","explanation":"Suyun geçebildiği ama bazı çözünenlerin geçemediği zar.","origin":"source"},{"term":"derişim","explanation":"Belirli miktar çözeltideki çözünen madde miktarı.","origin":"supporting"}],"example":{"text":"Tuzlu suya konan salatalık dilimi suyunu tuzlu tarafa kaybeder ve büzülür.","origin":"generated"},"quiz":{"question":"Saf suya konan kuru üzüme ne olur?","options":[{"id":"A","text":"Üzümden suya şeker geçer, üzüm küçülür."},{"id":"B","text":"Su üzümün içine geçer, üzüm şişer."},{"id":"C","text":"Hiçbir şey olmaz; derişim eşittir."},{"id":"D","text":"Su üzümden dışarı çıkar, üzüm büzülür."}],"correct_option_id":"B","answer_explanation":"Üzümün içi daha derişiktir; su, derişimi düşük olan saf sudan üzüme geçer."},"warnings":[]}"""
+{"status":"ready","simple_explanation":"Ozmozda hareket eden şey sudur, çözünen madde değildir. Su, içinde daha az çözünmüş madde bulunan taraftan daha çok çözünmüş madde bulunan tarafa geçer. Böylece iki taraftaki derişim farkı azalmaya yönelir.","source_refs":["P1"],"terms":[{"term":"yarı geçirgen zar","explanation":"Suyun geçebildiği ama bazı çözünenlerin geçemediği zar.","origin":"source"},{"term":"derişim","explanation":"Belirli miktar çözeltideki çözünen madde miktarı.","origin":"source"}],"example":{"text":"Tuzlu suya konan salatalık dilimi suyunu tuzlu tarafa kaybeder ve büzülür.","origin":"generated"},"quiz":{"question":"Saf suya konan kuru üzüme ne olur?","options":[{"id":"A","text":"Üzümden suya şeker geçer, üzüm küçülür."},{"id":"B","text":"Su üzümün içine geçer, üzüm şişer."},{"id":"C","text":"Hiçbir şey olmaz; derişim eşittir."},{"id":"D","text":"Su üzümden dışarı çıkar, üzüm büzülür."}],"correct_option_id":"B","answer_explanation":"Üzümün içi daha derişiktir; su, derişimi düşük olan saf sudan üzüme geçer."},"warnings":[]}"""
 
 FEEDBACK_RULES = f"""Sen Türkçe geri bildirim veren bir öğrenme asistanısın.
 Öğrenci dört seçenekli bir soruyu cevapladı ve kısa bir gerekçe yazdı. Cevabın doğru olup olmadığı
@@ -59,7 +59,8 @@ uygulama tarafından belirlendi ve is_correct alanında sana VERİLDİ; bunu de�
 Kurallar:
 1. strengths: öğrencinin GEREKÇESİNDE gerçekten bulunan doğru düşünceleri 0-2 madde halinde yaz.
    Gerekçede doğru bir düşünce yoksa boş liste ver; uydurma övgü yazma.
-2. improvements: gerekçedeki eksik ya da hatalı akıl yürütmeyi 1-2 maddede, gerekçeye atıfla göster.
+2. improvements: gerekçedeki eksik ya da hatalı akıl yürütme varsa 0-2 maddede, gerekçeye atıfla göster.
+   Gerekçe doğru ve yeterliyse boş liste ver; hata veya eksik uydurma.
 3. retry_hint: öğrenci yanlışsa doğru cevabı SÖYLEMEDEN yeniden düşünmesini sağlayacak tek cümlelik ipucu;
    doğruysa kavramı pekiştiren tek cümle.
 4. Türkçe, nazik ve kısa yaz. Genel yeterlilik puanı verme.

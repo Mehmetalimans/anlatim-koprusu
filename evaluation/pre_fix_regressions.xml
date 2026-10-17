@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="3" skipped="0" tests="3" time="1.157" timestamp="2026-10-17T17:24:29.027043+03:00" hostname="DESKTOP-P0M7QI2"><testcase classname="evaluation.test_acceptance_offline" name="test_switch_to_live_clears_development_work" time="0.285"><failure message="assert not True&#10; +  where True = any(&lt;generator object test_switch_to_live_clears_development_work.&lt;locals&gt;.&lt;genexpr&gt; at 0x000001D3224D3850&gt;)">def test_switch_to_live_clears_development_work():
+        at = dev_python_app()
+        by_label(at.radio, 'Çalışma modu').set_value('Canlı (Gemini)').run()
+        assert not at.exception
+&gt;       assert not any(r.label == 'Cevabın' for r in at.radio)
+E       assert not True
+E        +  where True = any(&lt;generator object test_switch_to_live_clears_development_work.&lt;locals&gt;.&lt;genexpr&gt; at 0x000001D3224D3850&gt;)
+
+evaluation\test_acceptance_offline.py:185: AssertionError</failure></testcase><testcase classname="evaluation.test_acceptance_offline" name="test_changing_development_result_kind_clears_previous_work" time="0.154"><failure message="assert not True&#10; +  where True = any(&lt;generator object test_changing_development_result_kind_clears_previous_work.&lt;locals&gt;.&lt;genexpr&gt; at 0x000001D3224D2740&gt;)">def test_changing_development_result_kind_clears_previous_work():
+        at = dev_python_app()
+        by_label(at.selectbox, 'Geliştirme sonucu').set_value('insufficient_source').run()
+        assert not at.exception
+&gt;       assert not any(r.label == 'Cevabın' for r in at.radio)
+E       assert not True
+E        +  where True = any(&lt;generator object test_changing_development_result_kind_clears_previous_work.&lt;locals&gt;.&lt;genexpr&gt; at 0x000001D3224D2740&gt;)
+
+evaluation\test_acceptance_offline.py:193: AssertionError</failure></testcase><testcase classname="evaluation.test_acceptance_offline" name="test_fenced_question_code_is_rendered_as_code" time="0.138"><failure message="AssertionError: assert 1 == 2&#10; +  where 1 = len(ElementList(_list=[Code(language='python')]))&#10; +    where ElementList(_list=[Code(language='python')]) = AppTest(\n    _script_path='C:\\Users\\asus\\OneDrive\\Documents\\ChatGPT\\Samsung Ai hackathon\\app.py',\n    default_t...              3: Caption()\n            }\n        ),\n        2: SpecialBlock(\n            type='event'\n        )\n    }\n).code">def test_fenced_question_code_is_rendered_as_code():
+        at = dev_python_app()
+        case = next(c for c in REFERENCES if c['demo_id'] == 'python_for_range')
+        item = next(i for i in DEMOS if i['id'] == 'python_for_range')
+        req = BridgeRequest.model_validate(item['request'])
+        from ui import state as S
+        fp = S.fingerprint(req.source_text, req.selected_phrase, req.subject_label)
+        at.session_state['work'] = {'fp': fp, 'request': req, 'bridge': BridgeResult.model_validate(case['bridge_fixture']), 'is_dev': True}
+        at.run()
+        assert not at.exception
+&gt;       assert len(at.code) == 2  # Source and question each contain a code block.
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+E       AssertionError: assert 1 == 2
+E        +  where 1 = len(ElementList(_list=[Code(language='python')]))
+E        +    where ElementList(_list=[Code(language='python')]) = AppTest(\n    _script_path='C:\\Users\\asus\\OneDrive\\Documents\\ChatGPT\\Samsung Ai hackathon\\app.py',\n    default_t...              3: Caption()\n            }\n        ),\n        2: SpecialBlock(\n            type='event'\n        )\n    }\n).code
+
+evaluation\test_acceptance_offline.py:206: AssertionError</failure></testcase></testsuite></testsuites>

@@ -17,7 +17,7 @@ Mehmet Ali tarafında üç ders içeriği, kabul testi planı, rapor ve İngiliz
 
 `content/Demo_Icerikleri_v1.md` içindeki kaynak metinler hazırdır. Fizik, ekonomi ve Python için kelime/ifade kontrolleri yapılmıştır. Kaynakların son API veri biçimine dönüşümü, senin içerik şemanı paylaşmandan sonra Mehmet Ali tarafından yapılacaktır.
 
-Ortak plandaki `BridgeRequest` alanlarıyla üç girdi ayrıca `content/demo_inputs.json` içinde hazırdır. Her öğenin `request` alanı kullanılabilir; JSON'un bütün üst yapısı uygulamanın kesin içerik yükleme şeması olarak dayatılmıyor. Geri bildirim için üç sabit soru ve 12 öğrenci denemesi `evaluation/feedback_reference_cases.json` içindedir. Kullanım açıklaması: `evaluation/Referans_Paketini_Kullanma.md`.
+Ortak plandaki `BridgeRequest` alanlarıyla üç girdi ayrıca `evaluation/demo_inputs.json` içinde hazırdır. Her öğenin `request` alanı kullanılabilir; JSON'un bütün üst yapısı uygulamanın kesin içerik yükleme şeması olarak dayatılmıyor. Geri bildirim için üç sabit soru ve 12 öğrenci denemesi `evaluation/feedback_reference_cases.json` içindedir. Kullanım açıklaması: `evaluation/Referans_Paketini_Kullanma.md`.
 
 ## Bağımsız kabul
 

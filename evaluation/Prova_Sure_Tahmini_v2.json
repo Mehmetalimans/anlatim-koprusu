@@ -2,7 +2,7 @@
   "script": "docs/Demo_Konusmasi_EN_v2.md",
   "count_method": "Whitespace-separated words in English blockquotes only.",
   "previous_word_count": 462,
-  "current_word_count": 432,
+  "current_word_count": 434,
   "section_word_counts": {
     "A. 0:00-0:40 - Problem / Mehmet Ali": 64,
     "B. 0:40-1:10 - How it works / İrem": 57,
@@ -11,11 +11,11 @@
     "E. 2:05-2:40 - Try a wrong reason / İrem": 39,
     "F. 2:40-3:25 - Try again / İrem": 47,
     "G. 3:25-4:00 - Other subjects / Mehmet Ali": 48,
-    "H. 4:00-4:35 - Prompts and checks / İrem": 46,
+    "H. 4:00-4:35 - Prompts and checks / İrem": 48,
     "I. 4:35-5:00 - Social impact and limits / Mehmet Ali": 42
   },
-  "estimated_speech_seconds_at_100_wpm": 259,
-  "estimated_speech_seconds_at_120_wpm": 216,
+  "estimated_speech_seconds_at_100_wpm": 260,
+  "estimated_speech_seconds_at_120_wpm": 217,
   "assumed_demo_interaction_seconds": [
     45,
     75

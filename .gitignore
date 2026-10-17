@@ -11,3 +11,13 @@ __pycache__/
 venv/
 .pytest_cache/
 .DS_Store
+
+# Yerel belge üretimi ve test araçları
+tmp/
+output/
+tech_logs/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+Thumbs.db

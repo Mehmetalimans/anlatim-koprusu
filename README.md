@@ -14,16 +14,15 @@ python -m venv .venv
 pip install -r requirements.txt
 ```
 
-### Gemini API anahtarı (yerel, ücretsiz katman)
+### Gemini API anahtarı (yerel)
 
 1. https://aistudio.google.com/apikey adresinde Google hesabıyla oturum açıp **Create API key** ile anahtar oluşturun.
-   Faturalandırma (billing) **açmayın**; ücretsiz katman bu proje için yeterlidir.
+   Kullanılacak modelin erişimini ve ücretsiz kota durumunu kendi projenizde doğrulayın; mevcut kota bu repoda doğrulanmış değildir.
 2. Proje klasöründe `.env.example` dosyasını `.env` adıyla kopyalayın, `GEMINI_API_KEY=` satırının sonuna anahtarı yapıştırın.
 3. Anahtarı sohbete, repoya, ekran kaydına yazmayın. `.env` dosyası `.gitignore` ile hariç tutulur.
 
-Notlar: Ücretsiz katmanda gönderilen içerik Google tarafından ürün geliştirmek için kullanılabilir; kişisel veri
-girmeyin. Sınırlar proje başınadır ve AI Studio'daki rate-limit sayfasında görünür; günlük sınır gece yarısı
-(Pasifik saati) yenilenir.
+Demo için kişisel/gizli veri kullanmayın. Kullanılan hizmetin güncel veri koşullarını ve kota sınırlarını
+hesabınız üzerinden kontrol edin. `GEMINI_MODEL` varsayılanı bu bilgisayarda gerçek çağrıyla doğrulanmadı.
 
 ## Çalıştırma
 
@@ -35,6 +34,24 @@ python -m pytest -q              # teknik testler (alternatif: python -m unittes
 
 Kenar çubuğundaki **Geliştirme verisi** modu modeli çağırmaz; etiketli örnek sonuç gösterir
 (“GELİŞTİRME VERİSİ — canlı AI sonucu değildir”). Bu mod canlı model testi sayılmaz.
+
+Geliştirme sonucu sabit Python örneğidir; seçilen başka metne göre yeni çıktı üretmez.
+Geri bildirim de sabit örnektir ve yazılan gerekçeyi AI ile değerlendirmez.
+
+## Kabul durumu — 17 Ekim 2026
+
+Üç ders `content/` içinden yükleniyor. Temiz kurulum ve kontrollü yanıtlarla **68 otomatik test** geçti.
+Gerçek API çağrısı ve modelin anlam doğruluğu bu bilgisayarda doğrulanmadı. Ayrıntılar:
+[kabul kaydı](evaluation/Kabul_Sonuclari_20261017.md),
+[İrem/Claude için devir](docs/Irem_Kabul_Devir_Notu.md),
+[güncel rapor ve sunum](delivery/README.md).
+
+```bash
+python -m pytest -q tests evaluation/test_acceptance_offline.py --junitxml=evaluation/offline_acceptance_results.xml
+```
+
+`scripts/check_gemini.py` bağlantı ve çıktı biçimini kontrol eder. Hazır gerekçesi yeni üretilen soruyla
+uyuşmayabileceğinden içerik/geri bildirim doğruluğu ayrıca gerçek soru üzerinden incelenmelidir.
 
 ## Yapı
 
