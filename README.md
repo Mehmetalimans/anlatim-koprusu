@@ -40,8 +40,12 @@ Geri bildirim de sabit örnektir ve yazılan gerekçeyi AI ile değerlendirmez.
 
 ## Kabul durumu — 17 Ekim 2026
 
-Üç ders `content/` içinden yükleniyor. Temiz kurulum ve kontrollü yanıtlarla **68 otomatik test** geçti.
-Gerçek API çağrısı ve modelin anlam doğruluğu bu bilgisayarda doğrulanmadı. Ayrıntılar:
+Üç ders `content/` içinden yükleniyor; **Kendi metnim** ile yeni kaynak ve ifade de girilebiliyor.
+Son uygulama sürümünde (`06a6c25`) kontrollü yanıtlarla **69 otomatik test** geçti.
+İrem'in paylaştığı canlı kayıtlarda `gemini-3.5-flash-lite` ile 16 üretim ve 50 geri bildirim bulunur;
+üç derste zero-shot/örnekli prompt karşılaştırması yapıldı. Bir yanlış gerekçenin övülmesi,
+bir fizik açıklamasında U/enerji değişimi ifadesi ve son revizyonların aynı yeni soruda uçtan uca
+denenmemiş olması bilinen sınırlardır. Öğrenme kazanımı ölçülmedi. Ayrıntılar:
 [kabul kaydı](evaluation/Kabul_Sonuclari_20261017.md),
 [İrem/Claude için devir](docs/Irem_Kabul_Devir_Notu.md),
 [güncel rapor ve sunum](delivery/README.md).

@@ -1,47 +1,38 @@
-# Teslim hazırlığı — Çevrimdışı kabul sonrası taslak v2
+# Grup 14 - Teslim dosyaları
 
-İrem'in `3e9a4ac` uygulama teslimi üç ders içeriğiyle birleştirildi. Temiz kurulum ve **68 çevrimdışı otomatik test** tamamlandı. Canlı API erişimi, gerçek model anlam incelemesi, prompt karşılaştırması ve video bekliyor. PDF/PPTX son teslim sürümü değildir.
+Bu klasörde 17 Ekim 2026 tarihli uygulama ve gerçek test kayıtlarına göre hazırlanmış rapor ve İngilizce sunum bulunur. Belgeler, bilinen sınırlamaları açıkça belirtir; kusursuz model çıktısı veya ölçülmüş öğrenme kazanımı iddia etmez.
 
-## Güncel dosyalar
+## Teslim için kullanılacak dosyalar
 
-- [İki sayfalık Türkçe rapor v2](Anlatim_Koprusu_Rapor_Taslagi_v2.pdf)
-- [Altı slaytlık İngilizce sunum v2](Anlatim_Koprusu_English_Deck_Draft_v2.pptx)
-- [Raporun düzenlenebilir metni](../docs/Rapor_Taslagi_v2.md)
-- [Sunum metni ve notları](../docs/Ingilizce_Sunum_Metni_v2.md)
-- [Kabul sonuçları ve bekleyen kapsam](../evaluation/Kabul_Sonuclari_20261017.md)
-- [İrem / Claude için sonraki görevler](../docs/Irem_Kabul_Devir_Notu.md)
-- [İngilizce demo konuşması](../docs/Demo_Konusmasi_EN_v2.md)
-- [Video ekran ve tıklama akışı](../docs/Video_Ekran_Akisi.md)
-- [Jüri soruları ve kısa İngilizce cevaplar](../docs/Juri_Sorulari_ve_Yanitlar.md)
-- [Mehmet Ali okuma kartı](../docs/Prova_Mehmet_Ali_EN.md)
-- [İrem okuma kartı](../docs/Prova_Irem_EN.md)
-- [Konuşma süre tahmini](../evaluation/Prova_Sure_Tahmini_v2.json)
-- [68 testin gerçek kaydı](../evaluation/offline_acceptance_results.xml)
-- [İçerik/dosya bütünlüğü](../evaluation/materials_check_result.json)
-- [Referans paketini kullanma](../evaluation/Referans_Paketini_Kullanma.md)
+- [İki sayfalık proje raporu - PDF](Anlatim_Koprusu_Proje_Raporu.pdf)
+- [İngilizce sunum - PowerPoint, altı slayt](Anlatim_Koprusu_English_Presentation.pptx)
+- [Raporun düzenlenebilir metni](../docs/Proje_Raporu.md)
+- [Sunum metni ve konuşmacı notları](../docs/Sunum_Icerigi_EN.md)
+- [Kod, promptlar ve kurulum README'si](../README.md)
+- [Gerçek canlı değerlendirme sonuçları](../evaluation/Canli_Sonuclar_20261017.md)
+- [Son bağımsız teknik test kaydı - 69 test](../evaluation/offline_acceptance_69.xml)
+- [Dosya ve içerik bütünlüğü kontrolü](../evaluation/materials_check_result.json)
 
-## Durum
+## Repo ve uygulama
 
-| İş | Gerçek durum |
-| --- | --- |
-| Üç dersin JSON içeriği | Uygulamaya bağlandı; kaynaklar 142/130/128 kelime |
-| Temiz kurulum ve yerel tarayıcı | Tamamlandı |
-| Teknik testler | 68 geçti; kontrollü yanıtlar, canlı ağ yok |
-| Yirmi kabul başlığı | 10 çevrimdışı tamamlandı, 9 kısmi, 1 bekliyor |
-| API anahtarı | İrem'in aldığı bildirildi; başarılı çağrı kaydı doğrulanmadı |
-| Canlı içerik/gerekçe değerlendirmesi | Bekliyor |
-| İki promptun gerçek karşılaştırması | Bekliyor |
-| PDF/PPTX | Çevrimdışı sonuçlarla güncellenmiş v2 taslak |
-| Sesli süre provası ve İngilizce video | Bekliyor |
-| Hedef kitle erişimi ve teslim formu | Bekliyor |
+Teslimde kullanılacak dal: `codex/acceptance`.
 
-## Son sürüme geçiş
+https://github.com/Mehmetalimans/anlatim-koprusu/tree/codex/acceptance
 
-1. İrem gerçek model ve anahtar içermeyen başarılı çağrı kaydını paylaşır.
-2. Üç dersin canlı çıktıları, soru anahtarları ve gerekçeye dayalı geri bildirim incelenir.
-3. Aynı girdilerle iki promptun gerçek çıktıları karşılaştırılır.
-4. PDF/PPTX gerçek sonuçlarla güncellenir; ölçülmeyen öğrenme kazanımı iddia edilmez.
-5. Gerçek arayüzde İngilizce prova ve yaklaşık beş dakikalık video yapılır.
-6. Başka bilgisayarda kurulum ve teslim bağlantılarının erişimi kontrol edilir.
+Kod snapshot'ı: `06a6c25`; sonraki belge commit'leri uygulama davranışını değiştirmez. Varsayılan `main` dalı henüz bu prototipi içermediğinden incelemeye yukarıdaki doğrudan dal bağlantısıyla başlanmalıdır. Repo erişimi hedef değerlendiriciler için ayrıca kontrol edilmelidir.
 
-`v1` dosyaları tarihsel taslaklardır. Geliştirme verisi canlı çıktı olarak sunulmaz. Dosya bütünlüğü, kontrollü uygulama testi ve gerçek model anlam incelemesi ayrı kanıtlardır.
+Kurulum ve çalıştırma README'dedir. Canlı kullanımda yerel Gemini anahtarı gerekir. `.env.example` paylaşılır; gerçek `.env` teslim edilmez. Geliştirme modu sabit örnek gösterir ve canlı AI çıktısı değildir.
+
+## Sonuçların kapsamı
+
+- Bağımsız yeniden çalıştırmada 69/69 otomatik test geçti; gerçek ağ çağrısı yapılmadı.
+- İrem'in 16 üretim ve 50 geri bildirim kaydı ile üç ders/iki prompt karşılaştırması repodadır. Her son karşılaştırma hücresinde tek üretim vardır.
+- Son geri bildirimde doğru şık/yanlış gerekçe alt grubunda bir hata kaçmıştır. Bir fizik açıklamasında U ile enerji değişimi ifadesi karışmıştır.
+- Son üretim ve geri bildirim revizyonları aynı yeni sorularda birlikte henüz kaydedilmemiştir. Manuel yeni metinle son canlı akış kontrolü ve video hazırlanmalıdır.
+- Öğrenci öğrenme kazanımı ölçülmemiştir.
+
+## Ayrı teslim edilecek video
+
+Yönerge, İngilizce sunumla ekran paylaşımında canlı uygulama demosunu içeren yaklaşık beş dakikalık video da ister. Video bu dosya paketinde henüz yoktur. Son video YouTube liste dışı veya erişime açık Drive bağlantısıyla paylaşılmalıdır.
+
+`Taslagi`, `Draft`, `v1` ve `v2` adlarını taşıyan eski PDF/PPTX dosyaları tarihsel hazırlıklardır. Yukarıda adları verilen güncel rapor ve sunum kullanılmalıdır.

@@ -1,8 +1,8 @@
 {
-  "checked_at_istanbul": "2026-10-17T17:51:58.615918+03:00",
+  "checked_at_istanbul": "2026-10-17T19:19:56.223668+03:00",
   "scope": "Authored data and delivery integrity only. No live model, app flow, semantic scoring or student learning test.",
   "all_passed": true,
-  "check_count": 83,
+  "check_count": 90,
   "failed_count": 0,
   "checks": [
     {
@@ -395,15 +395,50 @@
       "detail": "Six planned real runs"
     },
     {
-      "name": "comparisons_unfilled",
+      "name": "comparisons_live",
       "passed": true,
-      "detail": "No generated evidence or fabricated scores"
+      "detail": "Filled only from key-free live logs in evaluation/live"
+    },
+    {
+      "name": "fizik2_potansiyel_zero_shot:matches_log",
+      "passed": true,
+      "detail": "Output copied verbatim from log"
+    },
+    {
+      "name": "fizik2_potansiyel_with_example:matches_log",
+      "passed": true,
+      "detail": "Output copied verbatim from log"
+    },
+    {
+      "name": "econ100_firsat_maliyeti_zero_shot:matches_log",
+      "passed": true,
+      "detail": "Output copied verbatim from log"
+    },
+    {
+      "name": "econ100_firsat_maliyeti_with_example:matches_log",
+      "passed": true,
+      "detail": "Output copied verbatim from log"
+    },
+    {
+      "name": "python_for_range_zero_shot:matches_log",
+      "passed": true,
+      "detail": "Output copied verbatim from log"
+    },
+    {
+      "name": "python_for_range_with_example:matches_log",
+      "passed": true,
+      "detail": "Output copied verbatim from log"
+    },
+    {
+      "name": "live_logs_no_key",
+      "passed": true,
+      "detail": "No API key in live logs"
     },
     {
       "name": "local_document_links",
       "passed": true,
       "detail": {
-        "checked": 38,
+        "checked": 36,
         "missing": []
       }
     },
@@ -413,9 +448,9 @@
       "detail": 2
     },
     {
-      "name": "report_draft_label",
+      "name": "report_identity",
       "passed": true,
-      "detail": "The report is a development draft"
+      "detail": "Current report identity"
     },
     {
       "name": "presentation_slide_count",
