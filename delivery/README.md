@@ -11,6 +11,8 @@
 - [Kabul sonuçları ve bekleyen kapsam](../evaluation/Kabul_Sonuclari_20261017.md)
 - [İrem / Claude için sonraki görevler](../docs/Irem_Kabul_Devir_Notu.md)
 - [İngilizce demo konuşması](../docs/Demo_Konusmasi_EN_v2.md)
+- [Video ekran ve tıklama akışı](../docs/Video_Ekran_Akisi.md)
+- [Jüri soruları ve kısa İngilizce cevaplar](../docs/Juri_Sorulari_ve_Yanitlar.md)
 - [Mehmet Ali okuma kartı](../docs/Prova_Mehmet_Ali_EN.md)
 - [İrem okuma kartı](../docs/Prova_Irem_EN.md)
 - [Konuşma süre tahmini](../evaluation/Prova_Sure_Tahmini_v2.json)
