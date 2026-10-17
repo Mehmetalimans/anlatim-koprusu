@@ -32,8 +32,13 @@ Kurallar:
 2. simple_explanation: 3-6 cümle, sade ve doğru. Kaynakta olmayan bir bilgiyi kaynakta varmış gibi sunma.
 3. source_refs: açıklamanın dayandığı parça kimlikleri (yalnızca verilen kimlikler, ör. "P2").
 4. terms: 1-4 terim. Kaynakta geçen terim için origin="source"; anlamak için gereken ama kaynakta geçmeyen terim için origin="supporting".
-5. example: kaynakta OLMAYAN, yeni ve kısa bir örnek; origin="generated".
-6. quiz: Kaynaktaki örnekleri tekrar etmeyen YENİ bir durum hakkında tek doğru cevaplı, dört seçenekli soru.
+5. example: kaynakta OLMAYAN, yeni ve kısa bir örnek; origin="generated". Örnek tek başına anlaşılır olsun ve
+   seçilen ifadenin anlamını 1-2 cümlede uygulasın. Kod örneği verirsen döngü gövdesi dahil tam kodu ve ne
+   ürettiğini yaz. Sayısal örnekte yönü ve işareti açıkça belirt (ör. "A'dan B'ye, potansiyel 4 V artarken").
+6. quiz: Kaynaktaki örnekleri tekrar etmeyen YENİ ve somut bir durum hakkında tek doğru cevaplı, dört seçenekli soru.
+   Öğrenci kuralı bu yeni duruma UYGULAMALI: tanım cümlesini tanıtan ("hangisi doğrudur?") soru sorma ve hiçbir seçeneğe
+   kaynaktaki bir cümleyi kopyalama. Formül içeren konularda sayıları, birimleri ve işaretleri açık bir hesap sorusu sor.
+   Seçenekler yalnızca cevap olsun; gerekçe ("çünkü …") yalnızca answer_explanation alanında yer alsın.
    Kimlikler A, B, C, D. Çeldiriciler tipik öğrenci hatalarını yansıtsın, birbirinden farklı olsun ve
    yalnızca bir seçenek savunulabilir biçimde doğru olsun. Sayısal işlemleri iki kez kontrol et.
    answer_explanation doğru cevabın neden doğru olduğunu kısaca açıklasın.
@@ -43,6 +48,7 @@ Kurallar:
    Aksi halde status="ready".
 8. Kod parçalarını çalıştırdığını iddia etme; yalnızca okuyarak açıkla.
 9. Öğrenciye genel yeterlilik puanı verme.
+10. Öğrenciye giden metinlerde parça kimliklerini (P1, P2…) anma; kaynak bağlantısı yalnızca source_refs alanındadır.
 
 {_DATA_RULE}
 Yanıtı yalnızca istenen JSON şemasında ver."""
@@ -63,7 +69,11 @@ Kurallar:
    Gerekçe doğru ve yeterliyse boş liste ver; hata veya eksik uydurma.
 3. retry_hint: öğrenci yanlışsa doğru cevabı SÖYLEMEDEN yeniden düşünmesini sağlayacak tek cümlelik ipucu;
    doğruysa kavramı pekiştiren tek cümle.
-4. Türkçe, nazik ve kısa yaz. Genel yeterlilik puanı verme.
+4. Türkçe, nazik ve kısa yaz; öğrenciye "sen" diye hitap et. Genel yeterlilik puanı verme.
+5. Bilgi içeren her cümleyi yalnızca source_text, quiz ve answer_explanation'a dayandır. Bunlarla çelişen ya da
+   bunlarda bulunmayan bir kural yazma.
+6. strengths, improvements ve retry_hint birbiriyle çelişmesin. Seçim doğru ama gerekçe hatalıysa "kavramı doğru
+   uyguladın" deme; strengths yalnızca gerekçedeki doğru düşünceyi ya da boş liste içersin.
 
 {_DATA_RULE}
 Yanıtı yalnızca istenen JSON şemasında ver."""
@@ -87,8 +97,10 @@ def bridge_user_payload(segments: list[Segment], phrase: str, subject_label: str
 
 
 def feedback_user_payload(phrase: str, simple_explanation: str, quiz: dict[str, Any],
-                          selected_option_id: str, is_correct: bool, rationale: str) -> str:
+                          selected_option_id: str, is_correct: bool, rationale: str,
+                          source_text: str = "") -> str:
     data = {
+        "source_text": source_text,
         "selected_phrase": phrase,
         "explanation_shown": simple_explanation,
         "quiz": quiz,

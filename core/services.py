@@ -139,7 +139,7 @@ def evaluate_attempt(request: BridgeRequest, bridge: BridgeResult, selected_opti
             client = GeminiClient()
         user = prompts.feedback_user_payload(
             request.selected_phrase, bridge.simple_explanation, bridge.quiz.model_dump(),
-            selected_option_id, is_correct, r,
+            selected_option_id, is_correct, r, source_text=request.source_text,
         )
         draft = None
         last_err = ""

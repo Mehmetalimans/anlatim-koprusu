@@ -83,7 +83,17 @@ def run_checks():
     comparisons = load('evaluation/prompt_comparison_records.json')['records']
     expected_pairs = {(id_, variant) for id_ in ids for variant in ['zero_shot', 'with_example']}
     check('comparison_grid', len(comparisons) == 6 and {(c['demo_id'], c['prompt_variant']) for c in comparisons} == expected_pairs, 'Six planned real runs')
-    check('comparisons_unfilled', all(c['execution_status'] == 'not_run' and c['actual_output'] is None for c in comparisons), 'No generated evidence or fabricated scores')
+    check('comparisons_live', all(c['execution_status'] == 'run_live' and c['actual_output'] is not None
+                                  and (ROOT / c['log_file']).is_file() for c in comparisons),
+          'Filled only from key-free live logs in evaluation/live')
+    for c in comparisons:
+        if c.get('actual_output'):
+            log = load(c['log_file'])
+            variant = 'few_shot' if c['prompt_variant'] == 'with_example' else 'zero_shot'
+            match = [x for x in log['cases'] if x['case_id'] == c['demo_id'] and x['prompt_version'] == variant]
+            check(c['id'] + ':matches_log', bool(match) and match[0]['result'] == c['actual_output'], 'Output copied verbatim from log')
+    live_text = ' '.join(f.read_text(encoding='utf-8') for f in (ROOT / 'evaluation' / 'live').glob('*.json'))
+    check('live_logs_no_key', not re.search(r'AIza[0-9A-Za-z_-]{10,}|AQ\.[0-9A-Za-z_-]{20,}', live_text), 'No API key in live logs')
 
     folders = ['content', 'docs', 'evaluation', 'delivery']
     local_links = []

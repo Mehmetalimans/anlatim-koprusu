@@ -53,6 +53,11 @@ python -m pytest -q tests evaluation/test_acceptance_offline.py --junitxml=evalu
 `scripts/check_gemini.py` bağlantı ve çıktı biçimini kontrol eder. Hazır gerekçesi yeni üretilen soruyla
 uyuşmayabileceğinden içerik/geri bildirim doğruluğu ayrıca gerçek soru üzerinden incelenmelidir.
 
+Canlı kabul için `scripts/live_eval.py` kullanılır: `gen` üç derste zero_shot/few_shot üretimi ile yetersiz kaynak ve
+talimat içeren kaynak denemesini kaydeder; `template` gerçek sorulara göre doldurulacak gerekçe dosyasını üretir;
+`feedback` doldurulan gerekçeleri değerlendirir. Kayıtlar `tech_logs/` altına yazılır (repoya girmez); paylaşılan
+anahtarsız kayıtlar ve sonuçlar `evaluation/live/` ve [canlı kabul kaydı](evaluation/Canli_Sonuclar_20261017.md) içindedir.
+
 ## Yapı
 
 ```text
@@ -67,6 +72,7 @@ ui/state.py             Oturum: parmak izi, girdi değişince sıfırlama, cevap
 ui/views.py             Görüntüleme (kullanıcı metni HTML olarak işlenmez, kod çalıştırılmaz)
 fixtures/               Etiketli geliştirme verisi (ready / insufficient_source / geri bildirim / taslak girdi)
 scripts/check_gemini.py IR-02 erişim denemesi
+scripts/live_eval.py    Canlı üretim / gerekçe / prompt karşılaştırma kaydı
 tests/test_core.py      Teknik testler
 ```
 
