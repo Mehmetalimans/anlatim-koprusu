@@ -1,0 +1,59 @@
+{
+  "checked_at_istanbul": "2026-10-17T16:18:33.593691+03:00",
+  "scope": "Local checks of authored content only. No live app, model, prompt comparison or student evaluation was run.",
+  "content_file_sha256": "45d5543c944e275a1e7b5f803db833925f7215fc1b40edf76cfa210cdf85f6a7",
+  "records": [
+    {
+      "id": "fizik2_potansiyel",
+      "prose_word_count": 134,
+      "selected_phrase_occurrences": 1,
+      "source_characters": 919,
+      "checks_passed": true
+    },
+    {
+      "id": "econ100_firsat_maliyeti",
+      "prose_word_count": 130,
+      "selected_phrase_occurrences": 1,
+      "source_characters": 1006,
+      "checks_passed": true
+    },
+    {
+      "id": "python_for_range",
+      "prose_word_count": 121,
+      "selected_phrase_occurrences": 1,
+      "source_characters": 917,
+      "checks_passed": true
+    }
+  ],
+  "physics_arithmetic": {
+    "actual": [
+      6,
+      -6,
+      -6
+    ],
+    "expected": [
+      6,
+      -6,
+      -6
+    ],
+    "passed": true
+  },
+  "python_range_values": {
+    "range_1_4": [
+      1,
+      2,
+      3
+    ],
+    "range_2_5": [
+      2,
+      3,
+      4
+    ],
+    "passed": true
+  },
+  "app_acceptance_scenarios": {
+    "planned": 20,
+    "executed": 0,
+    "status": "pending"
+  }
+}
