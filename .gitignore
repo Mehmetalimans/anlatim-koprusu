@@ -1,0 +1,25 @@
+# Yerel anahtarlar ve ortamlar
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+.venv/
+venv/
+env/
+
+# Python ve test çıktıları
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Yerel taslaklar ve belge üretim ara dosyaları
+tmp/
+output/
+
+# Sistem dosyaları
+.DS_Store
+Thumbs.db
